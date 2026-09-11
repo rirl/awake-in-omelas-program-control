@@ -1,0 +1,202 @@
+= Awake in Omelas — Consolidation Control State
+:date: 2026-09-11
+:status: Validated Program-Control Checkpoint
+
+== Purpose
+
+This record captures the validated current control state for the KIOS / Omelas consolidation and architectural separation program.
+
+It supplements, but does not rewrite, the recovered 2026-08-27 integration and separation roadmap.
+
+The recovered roadmap remains the historical planning baseline. This document records the subsequently revalidated repository state and identifies the next active program milestone.
+
+== Program-Control Repository
+
+Repository:
+
+----
+awake-in-omelas-program-control
+----
+
+Canonical branch:
+
+----
+main
+----
+
+Validated program-control baseline:
+
+----
+40e6a81
+----
+
+The repository is clean and synchronized with:
+
+----
+origin/main
+----
+
+Remote Git transport uses SSH:
+
+----
+git@github.com:rirl/awake-in-omelas-program-control.git
+----
+
+The initial admitted program-control baseline contains:
+
+* `README.adoc`
+* `roadmaps/integration-separation-control-timeline.adoc`
+* `roadmaps/integration-separation-control-timeline.png`
+
+The recovered roadmap files were admitted without modification to their recovered content.
+
+== Awake in Omelas Repository State
+
+Repository:
+
+----
+awake-in-omelas
+----
+
+Validated working branch:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+Validated HEAD:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+The working tree was verified clean and synchronized with:
+
+----
+origin/feature/openwebui-mcp-filesystem
+----
+
+GAE-0001 through GAE-0007 are complete.
+
+GAE-0007 evidence is admitted at `a478481`.
+
+No fixed GAE-0008 program has been adopted.
+
+== Development State
+
+Validated `development` HEAD:
+
+----
+f6a1fba79567
+----
+
+Local `development` and `origin/development` are synchronized.
+
+Comparison between `development` and `feature/openwebui-mcp-filesystem`:
+
+----
+development...feature/openwebui-mcp-filesystem
+0 49
+----
+
+This establishes that `development` has no commits absent from the feature branch and that the feature branch contains 49 commits beyond `development`.
+
+The branches are therefore not divergent at the validated checkpoint.
+
+However, the current `development` HEAD does not yet contain the completed GAE/MCP/governance work and therefore is not yet the intended parking baseline.
+
+== Current Program Position
+
+The program remains between the closure of the existing feature work and establishment of the `development` parking baseline.
+
+Major KIOS / Omelas separation work has not begun.
+
+The architectural phases remain:
+
+. Phase A — Responsibility Inventory
+. Phase B — Boundary Design
+. Phase C — KIOS Extraction
+. Phase D — Runtime Extraction Completion
+. Phase E — Independent Validation
+. Phase F — Governed KIOS Reintegration
+. Phase G — Architectural Validation
+
+Phase A is not yet active.
+
+== Next Active Milestone
+
+The next active milestone is:
+
+----
+Integrate the completed feature work into development
+and establish development as the validated pre-separation
+parking baseline.
+----
+
+The immediate sequence remains:
+
+. confirm the integration method;
+. integrate `feature/openwebui-mcp-filesystem` into `development`;
+. validate the resulting `development` state;
+. record the validated parking baseline;
+. pause for reassessment;
+. create a new architecture/separation branch from that admitted baseline.
+
+No extraction or major responsibility refactoring should begin before that sequence is complete.
+
+== Architectural Objective
+
+The intended responsibility separation remains:
+
+----
+Omelas
+  domain / canonical content
+
+KIOS
+  reusable framework / governance capability
+
+GAE
+  governed artifact execution workflow / experiments
+
+Governed MCP Runtime
+  tooling / runtime / infrastructure
+----
+
+KIOS is intended to be reintegrated with Omelas only through explicit interfaces after the responsibilities have been separated and independently validated.
+
+The final repository topology remains an outcome of architectural analysis rather than a predetermined constraint.
+
+== Governance Constraints
+
+The following controls remain active:
+
+* Git is the final canonical admission authority.
+* Operational success does not imply admissibility.
+* GAE is a governed tool across phases, not the program itself.
+* Observations should be preserved before they are promoted into reusable rules.
+* Explicit repository and responsibility boundaries are preferred over accidental coupling.
+* Major separation work must not begin on `feature/openwebui-mcp-filesystem`.
+* The recovered 2026-08-27 roadmap remains a historical control record and should not be silently rewritten to represent later state.
+
+== Parked GAE / ECR Candidates
+
+The following hypotheses remain preserved but unscheduled:
+
+* recovery / correction after rejection;
+* missing-output admission failure;
+* operation-type admission violation.
+
+They should become active only when program needs provide a concrete reason to test them.
+
+== GitHub Tooling Boundary
+
+GitHub API and automation authentication remains intentionally separate from direct Git repository operations.
+
+The intended boundary is:
+
+* `gh` uses its own OAuth authentication for GitHub API and automation operations;
+* `git clone`, `git pull`, and `git push` use SSH;
+* existing SSH Git configuration should not be altered merely to support `gh`;
+* WSL2 `gh` authentication remains a separate decision from Git SSH access.
+
+This boundary is part of the operating model and should be preserved unless explicitly reconsidered.
