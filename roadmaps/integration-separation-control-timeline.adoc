@@ -1,0 +1,301 @@
+= Awake in Omelas — Integration & Separation Control Timeline
+:status: Active Program Control
+:date: 2026-08-27
+:current-branch: feature/openwebui-mcp-filesystem
+:parking-branch: development
+:current-head: a478481
+
+== Purpose
+
+This document is the textual control record for the Awake in Omelas integration and architectural separation roadmap.
+
+It exists to keep the program accountable to an explicit sequence of branch closure, integration, architectural separation, and validation work while avoiding unplanned expansion of the GAE experiment series.
+
+The companion PNG provides the visual roadmap. This AsciiDoc record carries the authoritative planning state because it can be reviewed, diffed, updated, and admitted through Git.
+
+Companion visual:
+
+----
+roadmaps/integration-separation-control-timeline.png
+----
+
+== Governance Position
+
+This roadmap is a program-control artifact, not Omelas narrative canon, not KIOS canon, not a GAE experiment record, and not MCP runtime configuration.
+
+Git is the book of record for this roadmap.
+
+Changes to milestone state, branch intent, or program direction should be made explicitly in this document and committed so that the control history remains reviewable.
+
+== Current Checkpoint
+
+As of 2026-08-27:
+
+* GAE-0001 through GAE-0007 are complete.
+* GAE-0007 evidence has been admitted.
+* Current HEAD is `a478481`.
+* Current working branch is `feature/openwebui-mcp-filesystem`.
+* The working repository was verified clean and synchronized with origin after GAE-0007.
+* `development` is the selected integration parking branch.
+* No fixed GAE-0008 roadmap has been adopted.
+
+== Strategic Direction
+
+The current strategy is:
+
+. Stop extending GAE by default.
+. Close and validate the existing `feature/openwebui-mcp-filesystem` body of work.
+. Perform only limited cleanup or refactoring needed to make that branch suitable for integration.
+. Integrate the completed work into `development`.
+. Validate `development` as a clean parking baseline.
+. Create a new architecture-focused branch from the validated `development` baseline.
+. Inventory current repository responsibilities.
+. Define clean responsibility and dependency boundaries among Omelas, KIOS, GAE, and the governed MCP runtime.
+. Separate KIOS and runtime responsibilities deliberately.
+. Validate the separated components independently.
+. Reintroduce KIOS into Omelas through explicit governed interfaces.
+. Select additional GAE experiments only when they materially support the architectural work.
+
+== Status Vocabulary
+
+`DONE`:: Milestone is complete and its result has been reviewed.
+
+`CURRENT`:: Milestone is the active work item.
+
+`NEXT`:: Milestone is the next intended action once the current item is complete.
+
+`PLANNED`:: Milestone is expected but has not yet become active work.
+
+`DECISION`:: A deliberate choice must be made before proceeding.
+
+`PARKED`:: Candidate work is preserved but not scheduled.
+
+== Control Timeline
+
+=== Lane A — Current Feature Branch
+
+Branch:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+Purpose of this lane: close the existing MCP/governance/GAE body of work without beginning the major architectural separation on the old feature branch.
+
+[cols="1,1,2,4",options="header"]
+|===
+|ID |Status |Milestone |Exit condition
+
+|A0
+|DONE
+|Completed governed execution work
+|GAE-0001 through GAE-0007 complete; MCP/governance evidence preserved.
+
+|A1
+|DONE
+|Closure review
+|Commit set reviewed and GAE/ECR evidence confirmed preserved.
+
+|A2
+|DONE
+|Validation sweep
+|Repository clean; governed runtime healthy; GAE-0007 closed and pushed.
+
+|A3
+|CURRENT
+|Limited cleanup / refactor
+|Only branch-local cleanup required for safe integration is performed. No KIOS/Omelas separation begins here.
+
+|A4
+|DECISION
+|Integration method
+|Choose the least disruptive integration approach. Prefer merge into `development`; use rebase only if there is a concrete need.
+|===
+
+=== Milestone M1 — Integrate Current Work
+
+Proposed direction:
+
+----
+feature/openwebui-mcp-filesystem -> development
+----
+
+M1 is complete only when the current feature work has been integrated into `development` and the result is ready for post-merge validation.
+
+=== Lane B — Development Parking Baseline
+
+Branch:
+
+----
+development
+----
+
+[cols="1,1,2,4",options="header"]
+|===
+|ID |Status |Milestone |Exit condition
+
+|B1
+|PLANNED
+|Post-merge validation
+|`development` is clean; rendering and repository-local checks pass; expected integration state is confirmed.
+
+|B2
+|PLANNED
+|Development parking checkpoint
+|A stable integration baseline is established, recorded, and deliberately paused for reassessment before new architecture work begins.
+|===
+
+=== Milestone M2 — Create the Architecture Branch
+
+Create a new branch only after the `development` parking baseline is validated.
+
+Suggested branch name:
+
+----
+feature/architectural-separation-phase-a
+----
+
+The exact name may be adjusted before creation, but the branch must clearly express architectural separation responsibility and must originate from the validated `development` baseline.
+
+=== Lane C — Architectural Separation
+
+[cols="1,1,2,4",options="header"]
+|===
+|ID |Status |Milestone |Exit condition
+
+|C1
+|PLANNED
+|Phase A — Responsibility Inventory
+|Current responsibilities are classified using Omelas, KIOS, GAE, Runtime/MCP, Historical, and Unresolved buckets. A responsibility matrix exists before moves are proposed.
+
+|C2
+|PLANNED
+|Phase B — Boundary Design
+|Repository ownership, dependency direction, interfaces, and shared governance boundaries are explicitly defined.
+
+|C3
+|PLANNED
+|Select extraction work
+|The next extraction sequence is chosen from evidence: KIOS extraction, runtime-separation completion, or another boundary-preserving operation.
+|===
+
+=== Milestone M3 — Responsibility Map Accepted
+
+M3 is reached when the responsibility inventory is sufficiently complete to distinguish domain-specific Omelas concerns from generic KIOS, GAE/workflow, runtime/tooling, historical, and unresolved responsibilities.
+
+=== Milestone M4 — Boundary Design Accepted
+
+M4 is reached when the program has an explicit dependency and repository responsibility model suitable for planning extraction work without relying on the current entangled repository structure.
+
+== Target Architecture Direction
+
+The intended responsibility model is:
+
+----
+Omelas
+  domain / narrative / canon
+        |
+        | consumes explicit capabilities
+        v
+KIOS
+  generic framework / governance
+
+GAE
+  governed workflow / experiments / evidence
+
+Governed MCP Runtime
+  tooling / runtime / infrastructure
+----
+
+The exact repository topology remains subject to Phase A and Phase B findings.
+
+The key intended direction is that Omelas consumes cleanly separated generic capabilities rather than remaining the repository in which those generic capabilities are defined by accident of history.
+
+== Control Principles
+
+* Git remains the final canonical admission authority.
+* Do not begin major architectural separation on `feature/openwebui-mcp-filesystem`.
+* Use GAE where it materially supports the work; do not extend the GAE series merely to continue the series.
+* Preserve ECR candidates without turning them automatically into scheduled work.
+* Prefer clear branch and repository responsibility boundaries over long-lived entanglement.
+* Treat `development` as the integration parking baseline for the current transition.
+* Preserve observations and empirical evidence before canonizing reusable rules.
+* Operational execution success does not imply artifact or change-set admissibility.
+
+== Parked GAE Candidates
+
+The following empirically motivated hypotheses are preserved in the ECR/Potential Backlog and are not currently scheduled:
+
+* Recovery / correction after rejection.
+* Missing-output admission failure.
+* Operation-type admission violation.
+
+These candidates may be selected later if architectural work creates a concrete reason to test them.
+
+== Off-Path Indicators
+
+The program should stop and reassess if any of the following occurs:
+
+* New GAE experiments begin before the current integration work is parked in `development` without a clear architectural need.
+* Major KIOS/Omelas separation begins on the old MCP feature branch.
+* The `development` validation checkpoint is skipped.
+* A new branch is created before its responsibility and origin are explicit.
+* Runtime responsibilities begin moving back into Omelas after separation.
+* KIOS begins depending on Omelas-specific domain semantics.
+* Observations are promoted directly into canon without ECR review/triage.
+* Branch purpose becomes unclear or a branch begins accumulating work outside its stated responsibility.
+
+== Checkpoint Questions
+
+At every transition, answer these questions explicitly:
+
+. What branch are we on?
+. Is the working tree clean?
+. Is the branch synchronized with its intended remote?
+. Which milestone is active?
+. What evidence proves the previous milestone complete?
+. What is the next committed action?
+. Does that action belong on the current branch?
+. Are we adding work that belongs in the Potential Backlog instead?
+. Are we still following the intended architectural direction?
+
+== Current Next Intended Move
+
+The next intended move is:
+
+. Review the current feature branch for limited cleanup/refactor needed before integration.
+. Complete only that bounded cleanup.
+. Select the integration method for `development`.
+. Integrate the feature branch into `development`.
+. Perform post-merge validation.
+. Establish and record the `development` parking checkpoint.
+
+No architectural extraction should begin until that sequence is complete unless the control roadmap itself is deliberately revised and admitted.
+
+== Update Protocol
+
+When a milestone changes state:
+
+. Update this AsciiDoc record first.
+. Record the evidence or commit that justifies the change.
+. Update the current branch, HEAD, and active milestone attributes or sections as needed.
+. Regenerate the companion PNG when a visual checkpoint update would be useful.
+. Review the diff.
+. Commit the roadmap change independently enough that program-control history remains intelligible.
+
+The PNG is a visual representation of this record. If the two disagree, this AsciiDoc document should be treated as the reviewable control source until the discrepancy is resolved.
+
+== Milestone History
+
+[cols="1,2,4",options="header"]
+|===
+|Date |Milestone / Event |Evidence
+
+|2026-08-27
+|GAE-0007 completed and evidence admitted
+|Commit `a478481` — `docs(gae): record GAE-0007 negative admission evidence`
+
+|2026-08-27
+|Program direction changed from automatic GAE continuation to integration and architectural separation planning
+|GAE follow-on hypotheses parked as ECR candidates; `development` selected as integration parking branch.
+|===

@@ -1,0 +1,77 @@
+= Awake in Omelas — Program Control
+
+This repository contains program-level planning and control records for the architectural consolidation and separation work associated with Awake in Omelas, KIOS, Governed Artifact Execution (GAE), and the Governed MCP Runtime.
+
+== Purpose
+
+The repository exists to preserve the proposed process, intended outcomes, sequencing, architectural decisions, checkpoints, and accepted program baselines for the consolidation effort.
+
+It is a control repository, not an implementation repository.
+
+Implementation work remains in the repositories that own the corresponding domain, framework, workflow, or runtime responsibility.
+
+== Governance Role
+
+Program-control records describe:
+
+* what work is proposed;
+* why that work is being undertaken;
+* the intended sequence;
+* milestone entry and exit conditions;
+* architectural decisions;
+* accepted baselines and checkpoints;
+* deferred or parked work.
+
+Git is the canonical admission authority for these records.
+
+Operational activity, discussion, or successful experimentation does not by itself change the admitted program-control state.
+
+== Initial Recovered Baseline
+
+The initial repository contents were recovered from the program-control material created on 2026-08-27.
+
+The recovered roadmap is:
+
+---
+
+## roadmaps/integration-separation-control-timeline.adoc
+
+Its companion visualization is:
+
+---
+
+## roadmaps/integration-separation-control-timeline.png
+
+The initial commit preserves these recovered artifacts as the historical starting point for subsequent program-control evolution.
+
+Later changes to milestone status, sequencing, architectural direction, or program decisions should be made explicitly through additional Git commits rather than by rewriting the historical meaning of the recovered baseline.
+
+== Scope
+
+The current architectural concern is the deliberate separation of responsibilities among:
+
+* Omelas — domain-specific and canonical content;
+* KIOS — reusable framework and governance capability;
+* GAE — governed artifact execution workflow, experiments, and evidence;
+* Governed MCP Runtime — tooling, runtime, and infrastructure.
+
+The program-control repository governs the process by which those responsibilities are analyzed, separated, independently validated, and deliberately reintegrated through explicit interfaces.
+
+It does not determine the final repository topology in advance. Repository and dependency boundaries are outcomes of the architectural analysis.
+
+== Control Model
+
+The current roadmap organizes the work around:
+
+. closure of the existing feature work;
+. integration into `development`;
+. establishment of a validated development parking baseline;
+. creation of a dedicated architectural-separation branch;
+. responsibility inventory;
+. boundary design;
+. deliberate extraction;
+. independent validation;
+. governed reintegration;
+. final architectural validation.
+
+The detailed control state is maintained in the roadmap documents rather than duplicated here.
