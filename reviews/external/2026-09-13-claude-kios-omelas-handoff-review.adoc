@@ -23,6 +23,14 @@ The bundle contained repository snapshots and generated Git metadata for:
 
 It also included an `AI-HANDOFF-PROMPT.md` directing the reviewer to reconstruct architecture, recovery, runtime hardening, consolidation state, and the next safe control checkpoint while keeping recovery, hardening, consolidation, and architectural refactoring separate.
 
+The exact prompt used for the external review is preserved in the admitted provenance artifact:
+
+----
+2026-09-13-claude-kios-omelas-handoff-prompt.md
+----
+
+Preserving the prompt is part of the review provenance because the prompt materially constrains the questions asked of the reviewer and therefore affects interpretation of the resulting analysis.
+
 == External reviewer
 
 Reviewer: Claude
@@ -33,12 +41,15 @@ The admitted review artifacts are:
 
 * `2026-09-13-claude-kios-omelas-handoff-review.pdf`
 * `2026-09-13-claude-kios-omelas-handoff-summary.png`
+* `2026-09-13-claude-kios-omelas-handoff-prompt.md`
 
 == Purpose of admission
 
 The purpose of admitting this review is to preserve an independent reading of the repositories at the close of the MCP recovery/hardening diversion and before resuming the KIOS/Omelas consolidation path.
 
 The review is useful because it tests whether a reviewer without access to the working conversation can reconstruct the program state from committed repository evidence.
+
+The preserved prompt makes that reconstruction more auditable by recording the instructions supplied to the reviewer.
 
 == Observations supported by the review
 
@@ -102,11 +113,15 @@ The authoritative sources remain:
 
 This external review may inform analysis and expose ambiguity, but it does not supersede those sources.
 
+The preserved prompt is provenance for the review process. It is not itself an implementation decision or program-control baseline.
+
 == Admission result
 
 The Claude review is admitted as external advisory evidence because it successfully reconstructs the major repository responsibilities, MCP recovery/hardening sequence, GHCR recovery validation, deferred work, and the intended consolidation control sequence from repository evidence alone.
 
 Its value is specifically as an independent reconstruction and documentation-quality check.
+
+The prompt used to request that reconstruction is admitted alongside the review so the analysis can later be interpreted in the context of the instructions given to the reviewer.
 
 No consolidation integration decision is admitted by this review.
 No branch SHA or ahead/behind value is refreshed by this review.
@@ -114,7 +129,7 @@ No architectural refactoring is authorized by this review.
 
 == Next control step
 
-After this review artifact is admitted, resume the previously planned consolidation control path:
+After this review artifact and its prompt provenance are admitted, resume the previously planned consolidation control path:
 
 . reconcile live state for `awake-in-omelas` and `awake-in-omelas-program-control`
 . verify the current relationship between `development` and `feature/openwebui-mcp-filesystem`
