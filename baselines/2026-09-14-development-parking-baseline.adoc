@@ -1,0 +1,140 @@
+= Development Parking Baseline
+:revdate: 2026-09-14
+:status: Validated Synchronized Parking Baseline
+
+== Purpose
+
+This record establishes the synchronized `development` parking baseline for the
+`awake-in-omelas` repository after completion of the governed integration of
+`feature/openwebui-mcp-filesystem`.
+
+It supersedes the earlier local parking-baseline validation record only with
+respect to remote synchronization state. The earlier validation evidence remains
+part of the admitted program-control history.
+
+== Repository state
+
+Repository:
+
+----
+awake-in-omelas
+----
+
+Parking branch:
+
+----
+development
+----
+
+Validated synchronized commit:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+Integrated source branch:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+Source-branch commit:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+At this checkpoint:
+
+* local `development` resolves to `a4784811711d276a2513e545187716f0905854cf`;
+* `origin/development` resolves to the same commit;
+* `feature/openwebui-mcp-filesystem` resolves to the same commit;
+* the integration was fast-forward-only;
+* no merge commit was introduced;
+* no history rewrite or rebase was performed.
+
+== Validation carried forward
+
+Post-integration validation established content identity between the integrated
+feature state and `development`.
+
+AsciiDoc rendering validation completed successfully:
+
+----
+69/69 .adoc files rendered successfully
+----
+
+No integration regression was identified.
+
+== Historical formatting findings
+
+Validation also exposed pre-existing formatting debt:
+
+* 28 section-spacing findings;
+* 10 `git diff --check` findings.
+
+These findings are historical and are not integration regressions.
+
+They therefore do not invalidate this synchronized parking baseline and are not
+silently repaired as part of this admission.
+
+Any remediation must be separately governed, explicitly bounded, and reviewed
+before application.
+
+== Control-state determination
+
+The following control state is accepted:
+
+* A4 / M1 — complete;
+* B1 — complete;
+* B2 — complete;
+* B3 — next controlled step;
+* M2 — not started;
+* C1 / Phase A Responsibility Inventory — not started.
+
+This record closes B2 by establishing the synchronized `development` parking
+baseline.
+
+== B3 boundary
+
+B3 is defined as:
+
+----
+Bounded Remediation
+----
+
+Its purpose is to review and, only where explicitly approved, correct mechanical
+formatting issues discovered during parking-baseline validation.
+
+B3 must:
+
+* remain limited to approved mechanical formatting changes;
+* preserve historical and evidence semantics;
+* avoid architectural refactoring or responsibility movement;
+* rerun the relevant validation after any change;
+* establish a cleaned pre-separation baseline if changes are made.
+
+B3 does not authorize broad repository cleanup or semantic rewriting.
+
+== Separation gate
+
+M2 — creation of the new architecture/separation branch — occurs only after B3
+is completed or explicitly closed without changes and the resulting
+pre-separation baseline is accepted.
+
+C1 / Phase A Responsibility Inventory has not started.
+
+== Authority boundary
+
+This record does not:
+
+* authorize deletion of the historical feature branch;
+* authorize rewriting previously admitted evidence;
+* begin B3 remediation;
+* create the separation branch;
+* begin architectural extraction;
+* begin C1 / Phase A Responsibility Inventory.
+
+The next program-control action is to update and review the roadmap and control
+diagram so they represent B3 and this synchronized parking-baseline state before
+any remediation or separation work begins.
