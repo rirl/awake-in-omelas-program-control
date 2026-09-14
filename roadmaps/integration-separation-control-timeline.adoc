@@ -1,15 +1,16 @@
 = Awake in Omelas — Integration & Separation Control Timeline
 :status: Active Program Control
-:date: 2026-08-27
-:current-branch: feature/openwebui-mcp-filesystem
+:date: 2026-09-14
+:current-branch: development
 :parking-branch: development
 :current-head: a478481
+:program-control-head: 9fec174
 
 == Purpose
 
 This document is the textual control record for the Awake in Omelas integration and architectural separation roadmap.
 
-It exists to keep the program accountable to an explicit sequence of branch closure, integration, architectural separation, and validation work while avoiding unplanned expansion of the GAE experiment series.
+It exists to keep the program accountable to an explicit sequence of branch closure, integration, bounded remediation, architectural separation, and validation work while avoiding unplanned expansion of the GAE experiment series.
 
 The companion PNG provides the visual roadmap. This AsciiDoc record carries the authoritative planning state because it can be reviewed, diffed, updated, and admitted through Git.
 
@@ -29,27 +30,38 @@ Changes to milestone state, branch intent, or program direction should be made e
 
 == Current Checkpoint
 
-As of 2026-08-27:
+As of 2026-09-14:
 
 * GAE-0001 through GAE-0007 are complete.
-* GAE-0007 evidence has been admitted.
-* Current HEAD is `a478481`.
-* Current working branch is `feature/openwebui-mcp-filesystem`.
-* The working repository was verified clean and synchronized with origin after GAE-0007.
-* `development` is the selected integration parking branch.
-* No fixed GAE-0008 roadmap has been adopted.
+* GAE-0007 evidence remains admitted at `a478481`.
+* `feature/openwebui-mcp-filesystem` and `development` resolve to `a478481`.
+* Integration into `development` was fast-forward-only.
+* No merge commit, rebase, or history rewrite was introduced.
+* Post-integration validation passed for content identity and Asciidoctor rendering.
+* 69 of 69 `.adoc` files rendered successfully.
+* Historical formatting debt was identified: 28 section-spacing findings and 10 `git diff --check` findings.
+* Those formatting findings are historical and are not integration regressions.
+* The synchronized `development` parking baseline has been admitted in program-control at `9fec174`.
+* B3 — Bounded Remediation is the next controlled milestone.
+* B3 has not started.
+* M2 has not started.
+* C1 / Phase A Responsibility Inventory has not started.
 
 == Strategic Direction
 
 The current strategy is:
 
 . Stop extending GAE by default.
-. Close and validate the existing `feature/openwebui-mcp-filesystem` body of work.
-. Perform only limited cleanup or refactoring needed to make that branch suitable for integration.
-. Integrate the completed work into `development`.
-. Validate `development` as a clean parking baseline.
-. Create a new architecture-focused branch from the validated `development` baseline.
-. Inventory current repository responsibilities.
+. Preserve the completed GAE-0001 through GAE-0007 evidence.
+. Treat the fast-forward integration into `development` as complete.
+. Treat the synchronized `development` state at `a478481` as the admitted parking baseline.
+. Perform B3 — Bounded Remediation before creating the architecture/separation branch.
+. Limit B3 to explicitly approved mechanical formatting corrections.
+. Preserve historical and evidence semantics during B3.
+. Rerun validation after any B3 change.
+. Establish a cleaned pre-separation baseline if B3 changes are made.
+. Create the architecture/separation branch only after B3 is complete or explicitly closed without changes.
+. Begin C1 / Phase A Responsibility Inventory only on the new architecture/separation branch.
 . Define clean responsibility and dependency boundaries among Omelas, KIOS, GAE, and the governed MCP runtime.
 . Separate KIOS and runtime responsibilities deliberately.
 . Validate the separated components independently.
@@ -62,7 +74,7 @@ The current strategy is:
 
 `CURRENT`:: Milestone is the active work item.
 
-`NEXT`:: Milestone is the next intended action once the current item is complete.
+`NEXT`:: Milestone is the next intended action once the current control update is admitted.
 
 `PLANNED`:: Milestone is expected but has not yet become active work.
 
@@ -72,7 +84,7 @@ The current strategy is:
 
 == Control Timeline
 
-=== Lane A — Current Feature Branch
+=== Lane A — Current Feature Branch Closure
 
 Branch:
 
@@ -80,7 +92,7 @@ Branch:
 feature/openwebui-mcp-filesystem
 ----
 
-Purpose of this lane: close the existing MCP/governance/GAE body of work without beginning the major architectural separation on the old feature branch.
+Purpose of this lane: close the existing MCP/governance/GAE body of work without beginning major architectural separation on the old feature branch.
 
 [cols="1,1,2,4",options="header"]
 |===
@@ -102,25 +114,31 @@ Purpose of this lane: close the existing MCP/governance/GAE body of work without
 |Repository clean; governed runtime healthy; GAE-0007 closed and pushed.
 
 |A3
-|CURRENT
+|DONE
 |Limited cleanup / refactor
-|Only branch-local cleanup required for safe integration is performed. No KIOS/Omelas separation begins here.
+|No additional branch-local cleanup was required to perform the selected fast-forward-only integration. No KIOS/Omelas separation began here.
 
 |A4
-|DECISION
+|DONE
 |Integration method
-|Choose the least disruptive integration approach. Prefer merge into `development`; use rebase only if there is a concrete need.
+|Fast-forward-only integration into `development` selected and recorded; no merge commit or history rewrite.
 |===
 
 === Milestone M1 — Integrate Current Work
 
-Proposed direction:
+Direction:
 
 ----
 feature/openwebui-mcp-filesystem -> development
 ----
 
-M1 is complete only when the current feature work has been integrated into `development` and the result is ready for post-merge validation.
+Status: `DONE`.
+
+M1 completed through fast-forward-only integration. `development` and the integrated feature branch both resolve to:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
 
 === Lane B — Development Parking Baseline
 
@@ -135,19 +153,56 @@ development
 |ID |Status |Milestone |Exit condition
 
 |B1
-|PLANNED
+|DONE
 |Post-merge validation
-|`development` is clean; rendering and repository-local checks pass; expected integration state is confirmed.
+|`development` is clean; content identity is confirmed; 69/69 AsciiDoc artifacts render successfully; historical formatting findings are classified as pre-existing rather than integration regressions.
 
 |B2
-|PLANNED
+|DONE
 |Development parking checkpoint
-|A stable integration baseline is established, recorded, and deliberately paused for reassessment before new architecture work begins.
+|The synchronized `development` baseline at `a478481` is established and admitted in program-control at `9fec174`.
+
+|B3
+|NEXT
+|Bounded Remediation
+|Only explicitly approved mechanical formatting issues are reviewed and, if approved, corrected. Historical and evidence semantics are preserved. Relevant validation is rerun. If changes are made, a cleaned pre-separation baseline is established before M2.
 |===
+
+=== B3 — Bounded Remediation Control Boundary
+
+B3 exists because parking-baseline validation exposed historical formatting debt without identifying an integration regression.
+
+Known findings:
+
+* 28 section-spacing findings.
+* 10 `git diff --check` findings.
+
+B3 is intentionally narrow.
+
+B3 may:
+
+* review the known findings;
+* classify which findings are safe mechanical corrections;
+* correct only explicitly approved mechanical formatting issues;
+* rerun the relevant rendering and whitespace validation;
+* establish a cleaned pre-separation baseline if changes are made.
+
+B3 must not:
+
+* change narrative, governance, historical, or evidence semantics;
+* rewrite admitted history;
+* perform repository-wide cleanup beyond the approved scope;
+* move responsibilities between Omelas, KIOS, GAE, or runtime components;
+* begin architectural extraction;
+* create the M2 separation branch before B3 is complete.
+
+If review determines that no remediation should be performed, B3 may be explicitly closed without change, with that decision recorded.
 
 === Milestone M2 — Create the Architecture Branch
 
-Create a new branch only after the `development` parking baseline is validated.
+Status: `PLANNED`.
+
+Create a new branch only after B3 is completed or explicitly closed without changes and the resulting pre-separation baseline is accepted.
 
 Suggested branch name:
 
@@ -155,7 +210,7 @@ Suggested branch name:
 feature/architectural-separation-phase-a
 ----
 
-The exact name may be adjusted before creation, but the branch must clearly express architectural separation responsibility and must originate from the validated `development` baseline.
+The exact name may be adjusted before creation, but the branch must clearly express architectural separation responsibility and must originate from the accepted pre-separation `development` baseline.
 
 === Lane C — Architectural Separation
 
@@ -178,6 +233,8 @@ The exact name may be adjusted before creation, but the branch must clearly expr
 |Select extraction work
 |The next extraction sequence is chosen from evidence: KIOS extraction, runtime-separation completion, or another boundary-preserving operation.
 |===
+
+C1 / Phase A Responsibility Inventory has not started.
 
 === Milestone M3 — Responsibility Map Accepted
 
@@ -215,12 +272,15 @@ The key intended direction is that Omelas consumes cleanly separated generic cap
 
 * Git remains the final canonical admission authority.
 * Do not begin major architectural separation on `feature/openwebui-mcp-filesystem`.
+* Do not begin architectural separation before B3 is closed.
 * Use GAE where it materially supports the work; do not extend the GAE series merely to continue the series.
 * Preserve ECR candidates without turning them automatically into scheduled work.
 * Prefer clear branch and repository responsibility boundaries over long-lived entanglement.
-* Treat `development` as the integration parking baseline for the current transition.
+* Treat `development` as the integration and pre-separation parking baseline for the current transition.
 * Preserve observations and empirical evidence before canonizing reusable rules.
 * Operational execution success does not imply artifact or change-set admissibility.
+* Historical formatting debt must not be silently converted into semantic change.
+* Mechanical cleanup and architectural separation are separate governed concerns.
 
 == Parked GAE Candidates
 
@@ -236,10 +296,12 @@ These candidates may be selected later if architectural work creates a concrete 
 
 The program should stop and reassess if any of the following occurs:
 
-* New GAE experiments begin before the current integration work is parked in `development` without a clear architectural need.
+* New GAE experiments begin before B3 is closed without a clear architectural need.
 * Major KIOS/Omelas separation begins on the old MCP feature branch.
-* The `development` validation checkpoint is skipped.
-* A new branch is created before its responsibility and origin are explicit.
+* B3 expands into unrestricted repository cleanup.
+* Historical or evidence semantics are changed under the label of formatting remediation.
+* M2 is created before B3 is completed or explicitly closed.
+* C1 begins before the M2 branch exists.
 * Runtime responsibilities begin moving back into Omelas after separation.
 * KIOS begins depending on Omelas-specific domain semantics.
 * Observations are promoted directly into canon without ECR review/triage.
@@ -258,19 +320,24 @@ At every transition, answer these questions explicitly:
 . Does that action belong on the current branch?
 . Are we adding work that belongs in the Potential Backlog instead?
 . Are we still following the intended architectural direction?
+. If B3 is active, is every proposed change mechanical, explicitly approved, and semantics-preserving?
 
 == Current Next Intended Move
 
 The next intended move is:
 
-. Review the current feature branch for limited cleanup/refactor needed before integration.
-. Complete only that bounded cleanup.
-. Select the integration method for `development`.
-. Integrate the feature branch into `development`.
-. Perform post-merge validation.
-. Establish and record the `development` parking checkpoint.
+. Review and admit this roadmap update and its companion PNG.
+. Begin B3 only after the control artifacts are admitted.
+. Review the 28 section-spacing findings and 10 `git diff --check` findings.
+. Approve or reject remediation on a bounded, mechanical basis.
+. If changes are approved, apply only those changes.
+. Rerun rendering and whitespace validation.
+. If changes were made, establish and admit a cleaned pre-separation baseline.
+. Close B3.
+. Only then create M2 — the architecture/separation branch.
+. Begin C1 / Phase A Responsibility Inventory on M2.
 
-No architectural extraction should begin until that sequence is complete unless the control roadmap itself is deliberately revised and admitted.
+No architectural extraction should begin until B3 is complete and M2 has been created from the accepted pre-separation baseline.
 
 == Update Protocol
 
@@ -298,4 +365,20 @@ The PNG is a visual representation of this record. If the two disagree, this Asc
 |2026-08-27
 |Program direction changed from automatic GAE continuation to integration and architectural separation planning
 |GAE follow-on hypotheses parked as ECR candidates; `development` selected as integration parking branch.
+
+|2026-09-14
+|A4 integration method selected
+|Program-control commit `80b8382` — integration-method decision; fast-forward-only selected.
+
+|2026-09-14
+|M1 integration completed and B1 validation recorded
+|`development` and `feature/openwebui-mcp-filesystem` resolve to `a478481`; program-control validation commit `8b0a84f`.
+
+|2026-09-14
+|B2 synchronized development parking baseline admitted
+|Program-control commit `9fec174` — synchronized `development` parking baseline.
+
+|2026-09-14
+|B3 inserted as pre-separation governance gate
+|Roadmap revised so bounded remediation precedes M2 and C1.
 |===
