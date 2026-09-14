@@ -1,0 +1,133 @@
+= Cleaned Pre-Separation Development Baseline
+:revdate: 2026-09-14
+:status: Validated Synchronized Pre-Separation Baseline
+
+== Purpose
+
+This record establishes the synchronized `development` baseline after completion and admission of B3 — Bounded Remediation.
+
+It is the control checkpoint immediately preceding M2 — creation of the architecture/separation branch.
+
+== Repository
+
+----
+awake-in-omelas
+----
+
+== Development Baseline
+
+Local branch:
+
+----
+development
+----
+
+Remote branch:
+
+----
+origin/development
+----
+
+Validated synchronized commit:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+Local `development` and `origin/development` were verified to resolve to the same commit after push.
+
+The working tree was clean.
+
+== Relationship to Previous Parking Baseline
+
+The prior synchronized development parking baseline was:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+The cleaned pre-separation baseline advances that state through exactly three B3 remediation commits:
+
+----
+a0ee77a docs(gae): apply bounded formatting remediation
+9e6550f docs(governance): normalize admitted evidence formatting
+9df5dd8 docs(provenance): normalize trailing EOF whitespace
+----
+
+Promotion from the parking baseline to the cleaned baseline was fast-forward-only.
+
+No merge commit, rebase, or history rewrite was introduced.
+
+== B3 Validation
+
+B3 validation is recorded in:
+
+----
+baselines/2026-09-14-b3-bounded-remediation-validation.adoc
+----
+
+Program-control admission commit:
+
+----
+b52b877
+----
+
+Validated outcomes include:
+
+* section-spacing findings reduced from `28` to `0`;
+* historical `git diff --check` findings reduced from `10` to `0`;
+* AsciiDoc rendering passed for `69/69` artifacts;
+* render failures: `0`;
+* non-whitespace identity checks passed for mechanically corrected artifacts;
+* human-in-the-loop review confirmed whitespace-only changes and correct rendered output where explicitly reviewed;
+* original admitted artifact versions remain preserved in Git history.
+
+== Correctability Principle
+
+The B3 validation record admitted the following program-control principle:
+
+[quote]
+____
+Admitted artifacts are not silently mutable, but they are correctable through a new governed admission event.
+____
+
+Corrections must remain explicit, scoped, validated, historically traceable, and appropriately reviewed according to semantic risk.
+
+This principle remains a candidate for evaluation during architectural separation for possible promotion into reusable KIOS governance.
+
+== Control State
+
+At this checkpoint:
+
+* A4 — Integration Method: `DONE`
+* M1 — Integrate Current Work: `DONE`
+* B1 — Post-merge Validation: `DONE`
+* B2 — Development Parking Checkpoint: `DONE`
+* B3 — Bounded Remediation: `DONE`
+* cleaned pre-separation `development` baseline: `ESTABLISHED`
+* M2 — Create Architecture/Separation Branch: `NOT STARTED`
+* C1 — Phase A Responsibility Inventory: `NOT STARTED`
+
+== Authority Boundary
+
+This checkpoint authorizes consideration of M2.
+
+It does not itself:
+
+* create the architecture/separation branch;
+* begin responsibility extraction;
+* begin C1;
+* move responsibilities among Omelas, KIOS, GAE, or the governed MCP runtime.
+
+Those actions require the next explicit control transition.
+
+== Next Intended Action
+
+Review and admit this synchronized cleaned pre-separation baseline record.
+
+After admission, update the integration/separation control roadmap so that:
+
+* B3 is recorded as complete;
+* the cleaned `development` baseline is recorded at `9df5dd8`;
+* M2 becomes the next controlled milestone;
+* C1 remains not started until M2 exists.
