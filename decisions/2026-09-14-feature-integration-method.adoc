@@ -1,0 +1,219 @@
+= Feature Integration Method Decision
+:revdate: 2026-09-14
+
+== Status
+
+Selected integration method for the current `awake-in-omelas` consolidation step.
+
+This decision records how the completed `feature/openwebui-mcp-filesystem` work is to be integrated into `development`.
+
+It does not perform the integration itself.
+
+== Scope
+
+Repository:
+
+----
+awake-in-omelas
+----
+
+Source branch:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+Target branch:
+
+----
+development
+----
+
+Selected integration method:
+
+----
+fast-forward-only merge
+----
+
+Command form:
+
+[source,bash]
+----
+git merge --ff-only feature/openwebui-mcp-filesystem
+----
+
+== Live-state evidence
+
+Live reconciliation performed on 2026-09-14 established:
+
+----
+development
+f6a1fba79567ed55bb2280adaedb104815623493
+----
+
+----
+feature/openwebui-mcp-filesystem
+a4784811711d276a2513e545187716f0905854cf
+----
+
+----
+origin/development
+f6a1fba79567ed55bb2280adaedb104815623493
+----
+
+----
+origin/feature/openwebui-mcp-filesystem
+a4784811711d276a2513e545187716f0905854cf
+----
+
+Merge base:
+
+----
+f6a1fba79567ed55bb2280adaedb104815623493
+----
+
+Ahead/behind relationship:
+
+----
+development...feature/openwebui-mcp-filesystem = 0 49
+----
+
+Observed topology:
+
+* `development` has no commits absent from `feature/openwebui-mcp-filesystem`.
+* `feature/openwebui-mcp-filesystem` contains 49 commits beyond `development`.
+* `development` is an exact ancestor of the feature branch.
+* No divergence exists.
+* Local branches and corresponding `origin/*` tracking branches were synchronized at reconciliation time.
+* Both `awake-in-omelas` and `awake-in-omelas-program-control` worktrees were clean.
+
+== Control-document alignment
+
+The existing roadmap states that the program should:
+
+. integrate the completed `feature/openwebui-mcp-filesystem` work into `development`;
+. choose the least disruptive integration approach;
+. prefer merge into `development`;
+. use rebase only when there is a concrete need;
+. validate `development` after integration;
+. establish a validated `development` parking baseline before architectural separation begins.
+
+The observed branch topology permits a fast-forward merge without rewriting any commit or creating a synthetic merge commit.
+
+== Decision
+
+Use a fast-forward-only merge from:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+into:
+
+----
+development
+----
+
+The merge must be executed with `--ff-only`.
+
+This is selected because:
+
+* there is no branch divergence;
+* `development` has no unique commits;
+* all 49 feature commits can be preserved unchanged;
+* no rebase is required;
+* no synthetic merge commit is required;
+* the resulting `development` history will be identical to the already-reviewed feature history;
+* `--ff-only` acts as a safety guard and will refuse the operation if branch topology changes before execution.
+
+== Rejected alternatives
+
+=== Rebase
+
+Rebase is not selected.
+
+There is no topology or history problem that requires rewriting the 49 feature commits.
+
+Rebasing would introduce unnecessary history transformation and additional validation risk.
+
+=== Non-fast-forward merge commit
+
+A synthetic merge commit is not selected.
+
+Because `development` is an exact ancestor of `feature/openwebui-mcp-filesystem`, a merge commit would add history without resolving any divergence.
+
+=== Forced branch movement
+
+Direct ref manipulation, forced update, or any equivalent bypass of the normal merge command is not selected.
+
+The integration should remain explicit, reviewable, and protected by Git's fast-forward-only check.
+
+== Preconditions for execution
+
+Before executing the integration:
+
+* `awake-in-omelas` must remain clean.
+* local `development` must equal `origin/development`.
+* local `feature/openwebui-mcp-filesystem` must equal `origin/feature/openwebui-mcp-filesystem`.
+* the merge base must remain `f6a1fba79567ed55bb2280adaedb104815623493`.
+* the ahead/behind relationship must remain `0 49`.
+
+If any of those conditions change, stop and repeat live-state reconciliation before integrating.
+
+== Expected postcondition
+
+After successful fast-forward integration, the expected local state is:
+
+----
+development
+a4784811711d276a2513e545187716f0905854cf
+----
+
+and:
+
+----
+feature/openwebui-mcp-filesystem
+a4784811711d276a2513e545187716f0905854cf
+----
+
+The two branches should therefore identify the same commit.
+
+The feature branch should not be deleted as part of this decision. Branch retirement, if desired, is a separate post-validation action.
+
+== Validation required after integration
+
+The integration alone does not establish the parking baseline.
+
+After the fast-forward:
+
+. verify `development` points to the expected commit;
+. verify the working tree is clean;
+. run the repository-local validation appropriate to the completed work;
+. confirm expected artifacts and governance evidence remain present;
+. confirm the integration did not alter commit identities;
+. synchronize `development` only after local validation is satisfactory;
+. record the validated `development` HEAD in program-control as the pre-separation parking baseline.
+
+== Authority boundary
+
+This decision authorizes only the integration method.
+
+It does not:
+
+* execute the merge;
+* push `development`;
+* delete the feature branch;
+* begin KIOS/Omelas architectural extraction;
+* authorize Phase A separation work before the parking baseline is validated and recorded.
+
+== Next control step
+
+After this decision is admitted:
+
+. re-check the stated preconditions in `awake-in-omelas`;
+. check out `development`;
+. execute the fast-forward-only merge locally;
+. validate the resulting `development` state;
+. record and admit the validated `development` parking baseline.
+
+No architectural separation or extraction should begin before that parking baseline is established.
