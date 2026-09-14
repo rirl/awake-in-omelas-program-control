@@ -1,0 +1,124 @@
+= External Review Admission - Claude KIOS/Omelas Handoff Review
+:revdate: 2026-09-13
+
+== Status
+
+Admitted as an external advisory review artifact.
+
+This review is evidence of an independent reconstruction of program state from repository contents and Git metadata. It is not an authoritative program-control baseline, implementation decision, or replacement for live repository reconciliation.
+
+== Source material
+
+The review was produced from the AI handoff bundle created on 2026-09-13:
+
+----
+awake-in-omelas-handoff-20260913-194033.tar.gz
+----
+
+The bundle contained repository snapshots and generated Git metadata for:
+
+* `awake-in-omelas`
+* `governed-mcp-runtime`
+* `awake-in-omelas-program-control`
+
+It also included an `AI-HANDOFF-PROMPT.md` directing the reviewer to reconstruct architecture, recovery, runtime hardening, consolidation state, and the next safe control checkpoint while keeping recovery, hardening, consolidation, and architectural refactoring separate.
+
+== External reviewer
+
+Reviewer: Claude
+
+The exact Claude model/version is not recorded in this admission note.
+
+The admitted review artifacts are:
+
+* `2026-09-13-claude-kios-omelas-handoff-review.pdf`
+* `2026-09-13-claude-kios-omelas-handoff-summary.png`
+
+== Purpose of admission
+
+The purpose of admitting this review is to preserve an independent reading of the repositories at the close of the MCP recovery/hardening diversion and before resuming the KIOS/Omelas consolidation path.
+
+The review is useful because it tests whether a reviewer without access to the working conversation can reconstruct the program state from committed repository evidence.
+
+== Observations supported by the review
+
+The external review independently reconstructed the following major control boundaries consistently with the repositories:
+
+* `awake-in-omelas` contains the canonical Omelas/KIOS/domain material and associated governance/evidence.
+* `governed-mcp-runtime` owns the governed MCP/MCPO runtime implementation, dependency pinning, image-selection behavior, runtime governance, and validation tests.
+* `awake-in-omelas-program-control` is a control repository rather than an implementation repository.
+* Recovery, runtime hardening, consolidation, and architectural refactoring are distinct control stages and should not be collapsed together.
+* MCP recovery/hardening established pinned dependencies, immutable runtime image selection, and a successful four-phase authenticated GHCR recovery validation.
+* The runtime hardening work cleared the immediate MCP recovery/artifact-durability blockers without performing KIOS/Omelas consolidation or architectural extraction.
+* The next program-control activity remains the reconciliation and integration/parking-baseline sequence before architectural separation begins.
+
+== Qualifications and corrections
+
+The review is advisory and contains several points that must not be promoted directly into authoritative control state without qualification.
+
+=== Repository name in summary graphic
+
+The summary graphic labels the runtime repository as `mcp-runtime`.
+
+The canonical repository name is:
+
+----
+governed-mcp-runtime
+----
+
+The abbreviated graphic label should not be used as the repository identifier in program-control decisions or execution instructions.
+
+=== Branch SHAs and ahead/behind counts
+
+The review reports the recorded program-control checkpoint values for `development` and `feature/openwebui-mcp-filesystem`, including the historical `0 49` ahead/behind relationship.
+
+Those values are evidence of the recorded checkpoint, not proof of current live Git state on admission of this review.
+
+Live repository state must be reconciled before any integration action is taken.
+
+=== Integration method remains a decision
+
+The summary graphic states the next checkpoint as merging `feature/openwebui-mcp-filesystem` into `development`.
+
+The supporting repository evidence is more precise: merge is the preferred integration method absent a concrete reason otherwise, but the integration method remains a pending decision until it is explicitly selected and recorded after live-state reconciliation.
+
+The control-safe sequence therefore remains:
+
+. reconcile live Git state
+. decide and record the integration method
+. perform the integration
+. validate the resulting `development` state
+. record the validated `development` parking baseline
+. only then begin the next architectural separation phase
+
+== Authority boundary
+
+The authoritative sources remain:
+
+* committed repository contents
+* committed tests and validation evidence
+* admitted program-control baselines and decisions
+* live Git state when an execution decision depends on current repository state
+
+This external review may inform analysis and expose ambiguity, but it does not supersede those sources.
+
+== Admission result
+
+The Claude review is admitted as external advisory evidence because it successfully reconstructs the major repository responsibilities, MCP recovery/hardening sequence, GHCR recovery validation, deferred work, and the intended consolidation control sequence from repository evidence alone.
+
+Its value is specifically as an independent reconstruction and documentation-quality check.
+
+No consolidation integration decision is admitted by this review.
+No branch SHA or ahead/behind value is refreshed by this review.
+No architectural refactoring is authorized by this review.
+
+== Next control step
+
+After this review artifact is admitted, resume the previously planned consolidation control path:
+
+. reconcile live state for `awake-in-omelas` and `awake-in-omelas-program-control`
+. verify the current relationship between `development` and `feature/openwebui-mcp-filesystem`
+. decide and record the integration method
+. establish and validate the `development` parking baseline
+
+Do not begin extraction or architectural separation before that parking baseline is admitted.
