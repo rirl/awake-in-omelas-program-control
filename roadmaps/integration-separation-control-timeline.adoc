@@ -1,10 +1,10 @@
 = Awake in Omelas — Integration & Separation Control Timeline
 :status: Active Program Control
 :date: 2026-09-14
-:current-branch: development
+:current-branch: feature/architectural-separation-phase-a
 :parking-branch: development
 :current-head: 9df5dd8
-:program-control-head: ea70164
+:program-control-head: 1f91e2c
 
 == Purpose
 
@@ -12,13 +12,32 @@ This document is the textual control record for the Awake in Omelas integration 
 
 It exists to keep the program accountable to an explicit sequence of branch closure, integration, bounded remediation, architectural separation, and validation work while avoiding unplanned expansion of the GAE experiment series.
 
-The companion PNG provides the visual roadmap. This AsciiDoc record carries the authoritative planning state because it can be reviewed, diffed, updated, and admitted through Git.
+The visual artifacts provide complementary views of roadmap lineage, current execution state, architectural intent, and Git provenance. This AsciiDoc record carries the authoritative planning state because it can be reviewed, diffed, updated, and admitted through Git.
 
-Companion visual:
+Established control timeline:
 
 ----
 roadmaps/integration-separation-control-timeline.png
 ----
+
+Current control-state snapshot:
+
+----
+roadmaps/integration-separation-control-state-m2-complete-c1-next.png
+----
+
+=== Related Roadmap and Reference Views
+
+The program-control repository maintains four complementary visual artifacts with distinct responsibilities:
+
+* `integration-separation-control-timeline.png` — the established execution/control timeline. It preserves the visual lineage of the integration, parking-baseline, and bounded-remediation process and is not overwritten merely to show a later checkpoint.
+* `integration-separation-control-state-m2-complete-c1-next.png` — the current control-state snapshot for the M2-complete / C1-next transition. Current-state snapshots may be added at material governance checkpoints without erasing earlier roadmap views.
+* `architecture-separation-roadmap.png` — the architectural transformation roadmap. It describes the intended progression from responsibility inventory through boundary design, extraction, independent validation, and governed reintegration.
+* `git-reference-timeline.png` — the historical and provenance reference. It records significant Git refs, checkpoints, branches, tags, and their relationship to repository history.
+
+The execution/control timeline preserves roadmap-process lineage. Current-state snapshots show the latest governed checkpoint. The architectural separation roadmap describes intended architectural transformation. The Git reference timeline provides historical and provenance context.
+
+These views are complementary and should not be treated as interchangeable. A milestone-state change does not require rewriting the architectural roadmap unless architectural intent itself changes. If execution-state information conflicts with another visual, this AsciiDoc control record remains the reviewable program-control source until the discrepancy is resolved.
 
 == Governance Position
 
@@ -43,8 +62,8 @@ As of 2026-09-14:
 * Historical `git diff --check` findings were reduced from 10 to 0.
 * The synchronized cleaned pre-separation `development` baseline has been admitted in program-control at `ea70164`.
 * B3 — Bounded Remediation is complete.
-* M2 is the next controlled milestone.
-* C1 / Phase A Responsibility Inventory has not started.
+* M2 — Create the Architecture Branch is complete.
+* C1 / Phase A Responsibility Inventory is the next controlled milestone and has not started.
 
 == Strategic Direction
 
@@ -57,8 +76,8 @@ The current strategy is:
 . Treat B3 — Bounded Remediation as complete.
 . Preserve the record that B3 was limited to explicitly approved mechanical formatting corrections.
 . Preserve historical and evidence semantics during remediation.
-. Create the architecture/separation branch next.
-. Begin C1 / Phase A Responsibility Inventory only on the new architecture/separation branch.
+. Treat the published `feature/architectural-separation-phase-a` branch as the M2 result.
+. Begin C1 / Phase A Responsibility Inventory next on the architecture/separation branch.
 . Define clean responsibility and dependency boundaries among Omelas, KIOS, GAE, and the governed MCP runtime.
 . Separate KIOS and runtime responsibilities deliberately.
 . Validate the separated components independently.
@@ -192,9 +211,9 @@ Program-control records for B3 include:
 
 === Milestone M2 — Create the Architecture Branch
 
-Status: `NEXT`.
+Status: `DONE`.
 
-Create a new branch from the accepted cleaned pre-separation `development` baseline:
+The architecture/separation branch was created from the accepted cleaned pre-separation `development` baseline and published to `origin`:
 
 ----
 9df5dd837800cecca3db31bff4bba48cd2342b9f
@@ -215,7 +234,7 @@ The exact name may be adjusted before creation, but the branch must clearly expr
 |ID |Status |Milestone |Exit condition
 
 |C1
-|PLANNED
+|NEXT
 |Phase A — Responsibility Inventory
 |Current responsibilities are classified using Omelas, KIOS, GAE, Runtime/MCP, Historical, and Unresolved buckets. A responsibility matrix exists before moves are proposed.
 
@@ -230,7 +249,7 @@ The exact name may be adjusted before creation, but the branch must clearly expr
 |The next extraction sequence is chosen from evidence: KIOS extraction, runtime-separation completion, or another boundary-preserving operation.
 |===
 
-C1 / Phase A Responsibility Inventory has not started.
+C1 / Phase A Responsibility Inventory is the next controlled milestone and has not started.
 
 === Milestone M3 — Responsibility Map Accepted
 
@@ -322,14 +341,13 @@ At every transition, answer these questions explicitly:
 
 The next intended move is:
 
-. Review and admit this roadmap update and its companion PNG.
-. Create M2 — the architecture/separation branch from `development` at `9df5dd8`.
-. Confirm the new branch is clean and correctly based.
-. Begin C1 / Phase A Responsibility Inventory on M2.
+. Review and admit this M2 completion update and its companion PNG.
+. Confirm `feature/architectural-separation-phase-a` remains synchronized with its remote at `9df5dd8`.
+. Begin C1 / Phase A Responsibility Inventory on the architecture/separation branch.
 . Build the responsibility matrix using Omelas, KIOS, GAE, Runtime/MCP, Historical, and Unresolved buckets.
 . Use the inventory to support Phase B boundary design.
 
-No architectural extraction should begin until M2 has been created from the accepted cleaned pre-separation baseline.
+No architectural extraction should begin until C1 establishes the responsibility inventory on the accepted architecture/separation branch.
 
 == Update Protocol
 
@@ -381,4 +399,8 @@ The PNG is a visual representation of this record. If the two disagree, this Asc
 |2026-09-14
 |Cleaned pre-separation baseline established
 |Program-control commit `ea70164` — cleaned pre-separation `development` baseline established after B3 completion.
+
+|2026-09-14
+|M2 architecture/separation branch created and published
+|`feature/architectural-separation-phase-a` created from `9df5dd837800cecca3db31bff4bba48cd2342b9f` and published to `origin` with local and remote heads equal.
 |===
