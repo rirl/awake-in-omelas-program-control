@@ -1,0 +1,244 @@
+= Development Parking-Baseline Validation Record
+:revdate: 2026-09-14
+
+== Status
+
+Validated local parking-baseline candidate.
+
+This record captures validation of the locally integrated `development` state in
+`awake-in-omelas` after the selected fast-forward-only integration method was
+applied.
+
+At the time of this record, local `development` had not yet been pushed to
+`origin/development`. Therefore this record validates the local candidate state;
+remote synchronization remains a separate control step.
+
+== Repository and branch state
+
+Repository:
+
+----
+awake-in-omelas
+----
+
+Validated branch:
+
+----
+development
+----
+
+Validated local HEAD:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+Integrated source branch:
+
+----
+feature/openwebui-mcp-filesystem
+----
+
+Source-branch HEAD:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+Remote `development` at validation time:
+
+----
+f6a1fba79567ed55bb2280adaedb104815623493
+----
+
+Observed status:
+
+----
+development...origin/development [ahead 49]
+----
+
+The working tree remained clean throughout validation.
+
+== Integration identity validation
+
+The integration-method decision required a fast-forward-only merge.
+
+Post-integration validation established:
+
+* `development` and `feature/openwebui-mcp-filesystem` identify the exact same commit.
+* The two branches have no content difference.
+* No synthetic merge commit was introduced.
+* No feature-branch commits were rewritten.
+* The local `development` branch contains the same admitted feature history at `a478481`.
+
+Observed result:
+
+----
+development:
+a4784811711d276a2513e545187716f0905854cf
+
+feature/openwebui-mcp-filesystem:
+a4784811711d276a2513e545187716f0905854cf
+
+feature -> development content difference:
+NONE — PASS
+
+commit identity:
+identical — PASS
+----
+
+== AsciiDoc rendering validation
+
+Core Asciidoctor validation was performed against all repository `*.adoc`
+artifacts while writing generated HTML outside the repository under `/tmp`.
+
+Validation environment:
+
+----
+Asciidoctor 2.0.20
+Ruby 3.2.3
+----
+
+Observed result:
+
+----
+AsciiDoc files tested: 69
+rendered successfully: 69
+render failures:       0
+----
+
+Result:
+
+----
+PASS
+----
+
+The rendering validation did not modify the repository.
+
+== Historical formatting findings
+
+Validation also surfaced existing formatting debt that is present in the
+integrated feature history.
+
+These findings are recorded here so that the parking-baseline validation is not
+misread as claiming that the repository has zero formatting findings.
+
+=== Section-spacing detector
+
+Repository-local detector:
+
+----
+scripts/engineering/detect-adoc-section-spacing.bash
+----
+
+Observed findings:
+
+----
+28
+----
+
+The findings occur in previously committed artifacts, including:
+
+* independent architecture-validation evidence;
+* repository-responsibility governance evidence;
+* governed-artifact-execution prompt artifacts.
+
+The findings were already present in the integrated feature commit and were not
+introduced by the fast-forward integration.
+
+The detector reports findings but does not itself fail with a nonzero exit code.
+
+=== Whole-range `git diff --check`
+
+A diagnostic comparison of the accumulated feature range against the old
+`origin/development` state reported historical whitespace findings.
+
+Affected files included:
+
+----
+artifacts/validation/independent-architecture-validation/review-template.adoc
+canon/provenance/prov-0002-tziphora-character-entry.adoc
+canon/provenance/prov-0003-book-night-artifact.adoc
+canon/provenance/prov-0004-tziphora-discovery-timeline.adoc
+canon/provenance/prov-0005-tziphora-discovery-checkpoint.adoc
+----
+
+Observed categories:
+
+* six trailing-whitespace findings in the independent architecture-validation
+  review template;
+* four new-blank-line-at-EOF findings in provenance artifacts.
+
+Historical origin review established that these files entered the feature
+history in earlier commits, including:
+
+----
+bfac112 docs(validation): establish independent architecture validation framework
+8b09975 feat: bootstrap Tziphora provenance entries
+----
+
+These findings therefore predate the current consolidation step.
+
+== Interpretation
+
+The whole-range `git diff --check` diagnostic was broader than the bounded
+validation historically used by the governed artifact-execution work.
+
+Existing GAE records show `git diff --check` being applied to bounded candidate
+changes and staged diffs rather than establishing a repository-wide rule that
+all historical content must be whitespace-clean.
+
+Accordingly:
+
+* the historical whitespace findings are real;
+* they are not integration regressions;
+* they do not invalidate the fast-forward integration;
+* they should not be silently rewritten as part of parking-baseline admission;
+* any cleanup should be a separate, explicitly bounded maintenance change.
+
+This preserves provenance of previously admitted artifacts and keeps
+consolidation distinct from repository hygiene work.
+
+== Validation determination
+
+The local `development` state at:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+is accepted as a validated local parking-baseline candidate because:
+
+* the selected fast-forward-only integration preserved commit identity;
+* `development` is content-identical to the admitted feature branch;
+* the working tree is clean;
+* all 69 AsciiDoc artifacts render successfully;
+* observed formatting findings are historical and not caused by integration.
+
+Known historical formatting findings are retained as explicit non-blocking debt.
+
+== Authority boundary
+
+This record validates the local parking-baseline candidate only.
+
+It does not:
+
+* claim that `origin/development` has already been synchronized;
+* authorize deletion of `feature/openwebui-mcp-filesystem`;
+* silently repair historical evidence artifacts;
+* authorize architectural separation before the synchronized parking baseline
+  is confirmed and recorded;
+* convert the spacing detector or whole-range `git diff --check` into a new
+  repository-wide admission rule.
+
+== Next control steps
+
+. Admit this validation record into `awake-in-omelas-program-control`.
+. Push local `development` to `origin/development`.
+. Confirm local and remote `development` resolve to
+  `a4784811711d276a2513e545187716f0905854cf`.
+. Record the synchronized `development` parking baseline.
+. Only after that synchronized baseline is established, proceed toward the new
+  architecture/separation branch.
+. Treat any historical formatting cleanup as a separate governed maintenance
+  action.
