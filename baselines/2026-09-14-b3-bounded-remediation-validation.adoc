@@ -1,0 +1,207 @@
+= B3 Bounded Remediation Validation
+:revdate: 2026-09-14
+:status: Validated Remediation Checkpoint
+
+== Purpose
+
+This record documents completion and validation of B3 — Bounded Remediation for the Awake in Omelas consolidation and separation program.
+
+B3 was performed after establishment of the synchronized `development` parking baseline and before creation of the architecture/separation branch.
+
+== Starting Baseline
+
+Repository:
+
+----
+awake-in-omelas
+----
+
+Starting branch baseline:
+
+----
+development
+----
+
+Starting commit:
+
+----
+a4784811711d276a2513e545187716f0905854cf
+----
+
+B3 execution branch:
+
+----
+maintenance/b3-bounded-formatting-remediation
+----
+
+No architectural separation, responsibility movement, extraction, or history rewrite was performed during B3.
+
+== Initial Findings
+
+Parking-baseline validation identified:
+
+* 28 section-spacing findings in AsciiDoc files.
+* 10 historical `git diff --check` findings.
+* No integration regression was identified.
+* 69 of 69 AsciiDoc files rendered successfully before remediation.
+
+The findings were classified as historical formatting debt.
+
+== Remediation Commits
+
+B3 remediation was performed in three explicitly bounded substeps.
+
+=== B3.1 — Prompt and Template Formatting
+
+Commit:
+
+----
+a0ee77a
+----
+
+Commit message:
+
+----
+docs(gae): apply bounded formatting remediation
+----
+
+Scope:
+
+* five GAE prompt artifacts;
+* one independent-architecture-validation review template.
+
+Changes:
+
+* inserted missing blank lines before AsciiDoc section headings;
+* removed trailing whitespace from review-template placeholder lines;
+* normalized final newlines where encountered.
+
+Validation established that all modified files preserved identical non-whitespace content.
+
+=== B3.2 — Admitted Evidence and Governance Formatting
+
+Commit:
+
+----
+9e6550f
+----
+
+Commit message:
+
+----
+docs(governance): normalize admitted evidence formatting
+----
+
+Scope:
+
+* independent architecture review evidence;
+* repository responsibility governance report.
+
+Changes:
+
+* inserted four missing blank lines before AsciiDoc section headings;
+* normalized final newline state.
+
+Validation established that both modified files preserved identical non-whitespace content.
+
+This substep was performed only after explicit reconsideration of how admitted evidence should be corrected.
+
+=== B3.3 — Provenance EOF Normalization
+
+Commit:
+
+----
+9df5dd8
+----
+
+Commit message:
+
+----
+docs(provenance): normalize trailing EOF whitespace
+----
+
+Scope:
+
+* `canon/provenance/prov-0002-tziphora-character-entry.adoc`
+* `canon/provenance/prov-0003-book-night-artifact.adoc`
+* `canon/provenance/prov-0004-tziphora-discovery-timeline.adoc`
+* `canon/provenance/prov-0005-tziphora-discovery-checkpoint.adoc`
+
+Changes:
+
+* removed one extra blank line at end of file from each artifact.
+
+Validation established that all four modified files preserved identical non-whitespace content.
+
+== Final Validation
+
+At B3 completion:
+
+* section-spacing findings: `28 -> 0`
+* historical `git diff --check` findings: `10 -> 0`
+* AsciiDoc render validation: `69/69 PASS`
+* render failures: `0`
+* working tree after final commit: clean
+* B3 branch HEAD: `9df5dd8`
+
+No substantive content change was introduced by B3.
+
+== Human Validation
+
+The maintainer performed human-in-the-loop review during B3 remediation.
+
+For the prompt/template remediation and the admitted evidence/governance formatting corrections, the maintainer:
+
+* inspected the modified-file diffs in VS Code;
+* confirmed that the observed changes were whitespace-related only;
+* reviewed rendered output;
+* confirmed that the rendered artifacts remained correct; and
+* observed no unintended semantic or presentational change.
+
+The provenance EOF normalization was additionally validated mechanically through exact diff review, non-whitespace content identity, clean `git diff --check`, and successful repository-wide rendering.
+
+These human assertions and machine validations together form part of the B3 admission evidence.
+
+== Correctability of Admitted Artifacts
+
+B3 exposed a useful governance distinction between historical immutability and file-level correctability.
+
+The following program-control principle is adopted upon admission of this record:
+
+[quote]
+____
+Admitted artifacts are not silently mutable, but they are correctable through a new governed admission event.
+____
+
+Admission makes the historical version of an artifact immutable in the admitted Git history. It does not require the current working-tree representation of that artifact to remain permanently uncorrected.
+
+An admitted artifact may be corrected when:
+
+* the original admitted version remains preserved in Git history;
+* the correction is explicit and narrowly scoped;
+* the correction does not silently alter evidentiary or semantic meaning;
+* the correction is reviewed and validated according to its risk;
+* the change is committed as a new historical event rather than rewriting prior history; and
+* new evidence records what was corrected, why it was corrected, how it was validated, and how the corrected version relates to the original admitted version.
+
+Substantive semantic corrections require stronger review and admission than purely mechanical remediation and must not be represented as formatting-only changes.
+
+This principle is currently a program-control rule derived from empirical B3 experience. It should be evaluated during architectural separation for possible promotion into reusable KIOS governance.
+
+== B3 Disposition
+
+B3 — Bounded Remediation is complete.
+
+The repository now has:
+
+* zero known section-spacing findings from the B3 inventory;
+* zero known historical `git diff --check` findings from the B3 inventory;
+* successful rendering of all 69 AsciiDoc artifacts;
+* preserved Git history for all pre-remediation admitted versions;
+* explicit machine and human validation of the remediation.
+
+No M2 architecture/separation branch has been created yet.
+
+No C1 / Phase A Responsibility Inventory work has started.
+
+The next control action is to review and admit this B3 validation record, then determine the controlled promotion of the validated B3 result back to `development` as the cleaned pre-separation baseline.
