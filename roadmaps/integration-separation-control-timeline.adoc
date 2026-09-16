@@ -23,7 +23,7 @@ roadmaps/integration-separation-control-timeline.png
 Current control-state snapshot:
 
 ----
-roadmaps/integration-separation-control-state-m2-complete-c1-next.png
+roadmaps/integration-separation-control-state-m2-complete-c0-r-next-c1-blocked.png
 ----
 
 === Related Roadmap and Reference Views
