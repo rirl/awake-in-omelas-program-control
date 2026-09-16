@@ -1,10 +1,10 @@
 = Awake in Omelas — Integration & Separation Control Timeline
 :status: Active Program Control
-:date: 2026-09-14
+:date: 2026-09-16
 :current-branch: feature/architectural-separation-phase-a
 :parking-branch: development
 :current-head: 9df5dd8
-:program-control-head: 1f91e2c
+:program-control-head: cf9193b
 
 == Purpose
 
@@ -31,7 +31,7 @@ roadmaps/integration-separation-control-state-m2-complete-c1-next.png
 The program-control repository maintains four complementary visual artifacts with distinct responsibilities:
 
 * `integration-separation-control-timeline.png` — the established execution/control timeline. It preserves the visual lineage of the integration, parking-baseline, and bounded-remediation process and is not overwritten merely to show a later checkpoint.
-* `integration-separation-control-state-m2-complete-c1-next.png` — the current control-state snapshot for the M2-complete / C1-next transition. Current-state snapshots may be added at material governance checkpoints without erasing earlier roadmap views.
+* `integration-separation-control-state-m2-complete-c1-next.png` — the prior control-state snapshot for the M2-complete / C1-next transition. It is preserved as historical checkpoint evidence and must not be overwritten merely because C0-R has been introduced.
 * `architecture-separation-roadmap.png` — the architectural transformation roadmap. It describes the intended progression from responsibility inventory through boundary design, extraction, independent validation, and governed reintegration.
 * `git-reference-timeline.png` — the historical and provenance reference. It records significant Git refs, checkpoints, branches, tags, and their relationship to repository history.
 
@@ -49,7 +49,7 @@ Changes to milestone state, branch intent, or program direction should be made e
 
 == Current Checkpoint
 
-As of 2026-09-14:
+As of 2026-09-16:
 
 * GAE-0001 through GAE-0007 are complete.
 * GAE-0007 evidence remains admitted at `a478481`.
@@ -63,7 +63,8 @@ As of 2026-09-14:
 * The synchronized cleaned pre-separation `development` baseline has been admitted in program-control at `ea70164`.
 * B3 — Bounded Remediation is complete.
 * M2 — Create the Architecture Branch is complete.
-* C1 / Phase A Responsibility Inventory is the next controlled milestone and has not started.
+* C0-R — Canon Lineage Reconciliation is the next controlled checkpoint and has not started.
+* C1 / Phase A Responsibility Inventory is blocked pending completion of C0-R.
 
 == Strategic Direction
 
@@ -77,7 +78,10 @@ The current strategy is:
 . Preserve the record that B3 was limited to explicitly approved mechanical formatting corrections.
 . Preserve historical and evidence semantics during remediation.
 . Treat the published `feature/architectural-separation-phase-a` branch as the M2 result.
-. Begin C1 / Phase A Responsibility Inventory next on the architecture/separation branch.
+. Complete C0-R — Canon Lineage Reconciliation before beginning C1.
+. Treat `feature/initial-canon-entries` as a recovery/reconciliation source, not as an integration branch.
+. Reconcile stranded canon lineage selectively and preserve provenance.
+. Keep C1 / Phase A Responsibility Inventory blocked until C0-R exit criteria are satisfied.
 . Define clean responsibility and dependency boundaries among Omelas, KIOS, GAE, and the governed MCP runtime.
 . Separate KIOS and runtime responsibilities deliberately.
 . Validate the separated components independently.
@@ -93,6 +97,8 @@ The current strategy is:
 `NEXT`:: Milestone is the next intended action once the current control update is admitted.
 
 `PLANNED`:: Milestone is expected but has not yet become active work.
+
+`BLOCKED`:: Milestone is intended but may not begin until an explicit prerequisite or governance gate is satisfied.
 
 `DECISION`:: A deliberate choice must be made before proceeding.
 
@@ -227,6 +233,51 @@ feature/architectural-separation-phase-a
 
 The exact name may be adjusted before creation, but the branch must clearly express architectural separation responsibility and must originate from the accepted pre-separation `development` baseline.
 
+=== Checkpoint C0-R — Canon Lineage Reconciliation
+
+Status: `NEXT`.
+
+C0-R exists to ensure that the stranded canon lineage is understood, preserved, and selectively reconciled before architectural responsibility classification begins.
+
+Recovery source:
+
+----
+feature/initial-canon-entries
+----
+
+Authoritative divergence boundary:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+Recovery source tip:
+
+----
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Current cleaned pre-reconciliation baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+The recovery lineage is not an integration branch.
+
+The following controls apply during C0-R:
+
+* wholesale merge of `feature/initial-canon-entries` is prohibited;
+* rebase of the stranded lineage into the current architecture branch is prohibited;
+* indiscriminate cherry-picking of the stranded lineage is prohibited;
+* reconciliation must be selective, reviewable, and provenance-preserving;
+* canon content, provenance, bootstrap/framework material, and historical generation tooling must be evaluated according to semantic responsibility rather than admitted merely because they share Git lineage;
+* no decision about retention, migration, archival treatment, or retirement of historical generation scripts is implied by entering C0-R.
+
+The current exploratory hypothesis that canon content and provenance might be retained while historical generation scripts are retired remains non-authoritative and must not be treated as an admitted program decision.
+
+C0-R is complete only when the stranded canon lineage has been accounted for, the selective reconciliation plan is admitted, recovery evidence is recorded, and unresolved tooling disposition is explicitly preserved as an independent decision where necessary.
+
 === Lane C — Architectural Separation
 
 [cols="1,1,2,4",options="header"]
@@ -234,7 +285,7 @@ The exact name may be adjusted before creation, but the branch must clearly expr
 |ID |Status |Milestone |Exit condition
 
 |C1
-|NEXT
+|BLOCKED
 |Phase A — Responsibility Inventory
 |Current responsibilities are classified using Omelas, KIOS, GAE, Runtime/MCP, Historical, and Unresolved buckets. A responsibility matrix exists before moves are proposed.
 
@@ -249,7 +300,7 @@ The exact name may be adjusted before creation, but the branch must clearly expr
 |The next extraction sequence is chosen from evidence: KIOS extraction, runtime-separation completion, or another boundary-preserving operation.
 |===
 
-C1 / Phase A Responsibility Inventory is the next controlled milestone and has not started.
+C1 / Phase A Responsibility Inventory remains blocked and has not started. It may begin only after C0-R is completed and admitted.
 
 === Milestone M3 — Responsibility Map Accepted
 
@@ -312,11 +363,11 @@ These candidates may be selected later if architectural work creates a concrete 
 
 The program should stop and reassess if any of the following occurs:
 
-* New GAE experiments begin before M2/C1 without a clear architectural need.
+* New GAE experiments begin before C0-R/C1 without a clear architectural need.
 * Major KIOS/Omelas separation begins on the old MCP feature branch.
 * B3 expands retroactively into unrestricted repository cleanup.
 * Historical or evidence semantics are changed under the label of formatting remediation.
-* C1 begins before the M2 branch exists.
+* C1 begins before C0-R is completed and admitted.
 * Runtime responsibilities begin moving back into Omelas after separation.
 * KIOS begins depending on Omelas-specific domain semantics.
 * Observations are promoted directly into canon without ECR review/triage.
@@ -341,13 +392,16 @@ At every transition, answer these questions explicitly:
 
 The next intended move is:
 
-. Review and admit this M2 completion update and its companion PNG.
-. Confirm `feature/architectural-separation-phase-a` remains synchronized with its remote at `9df5dd8`.
-. Begin C1 / Phase A Responsibility Inventory on the architecture/separation branch.
+. Preserve the admitted M2 result and current architecture branch at `9df5dd8`.
+. Complete and admit C0-R — Canon Lineage Reconciliation.
+. Verify and record the recovery anchors, Git bundle, checksum, and complete-history evidence.
+. Define and review a selective reconciliation plan for the stranded canon lineage.
+. Keep tooling retention, migration, archival treatment, or retirement explicitly undecided unless separately admitted.
+. Begin C1 / Phase A Responsibility Inventory only after C0-R exit criteria are satisfied.
 . Build the responsibility matrix using Omelas, KIOS, GAE, Runtime/MCP, Historical, and Unresolved buckets.
 . Use the inventory to support Phase B boundary design.
 
-No architectural extraction should begin until C1 establishes the responsibility inventory on the accepted architecture/separation branch.
+No architectural extraction should begin until C0-R is completed and C1 subsequently establishes the responsibility inventory on the accepted architecture/separation branch.
 
 == Update Protocol
 

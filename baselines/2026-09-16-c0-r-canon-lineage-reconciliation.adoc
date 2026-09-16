@@ -1,0 +1,392 @@
+= C0-R — Canon Lineage Reconciliation
+:date: 2026-09-16
+:status: Proposed Program-Control Checkpoint
+:repository: awake-in-omelas
+:program-control-repository: awake-in-omelas-program-control
+
+== Purpose
+
+This record establishes the recovery evidence, lineage boundaries, and governance
+constraints required for C0-R — Canon Lineage Reconciliation.
+
+C0-R exists to ensure that stranded canon history is understood, preserved, and
+selectively reconciled before C1 — Phase A Responsibility Inventory begins.
+
+This record does not perform canon recovery.
+
+It does not authorize a wholesale branch integration.
+
+It does not decide the future disposition of historical canon-generation tooling.
+
+== Current Program Position
+
+The current controlled sequence is:
+
+----
+M2    Create Architecture Branch          DONE
+C0-R  Canon Lineage Reconciliation        NEXT
+C1    Phase A Responsibility Inventory    BLOCKED
+----
+
+C1 remains blocked until C0-R exit criteria are satisfied and the resulting
+reconciliation state is admitted through program control.
+
+== Current Architecture Baseline
+
+Architecture branch:
+
+----
+feature/architectural-separation-phase-a
+----
+
+Cleaned pre-reconciliation baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+This commit is the current architecture/separation baseline from which C0-R is
+being governed.
+
+== Canon Recovery Source
+
+Recovery source branch:
+
+----
+feature/initial-canon-entries
+----
+
+Recovery source tip:
+
+----
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Authoritative divergence boundary:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+Stranded recovery range:
+
+----
+8b09975..8ec6666
+----
+
+The recovery source is treated as a reconciliation source.
+
+It is not an integration branch.
+
+== Recovery Anchors
+
+The following annotated recovery tags were established:
+
+----
+recovery/canon-boundary-2026-09-15
+recovery/canon-source-2026-09-15
+recovery/pre-reconciliation-baseline-2026-09-15
+----
+
+The tags were independently verified from the recovery bundle.
+
+=== Boundary Anchor
+
+Tag:
+
+----
+recovery/canon-boundary-2026-09-15
+----
+
+Annotated tag object:
+
+----
+c8deb00349fb42a8d8acf4e0a5ee63010b2cbb4d
+----
+
+Peeled commit:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+=== Recovery Source Anchor
+
+Tag:
+
+----
+recovery/canon-source-2026-09-15
+----
+
+Annotated tag object:
+
+----
+d3f509f4851c8bc0e041d084713c23dfba0f4463
+----
+
+Peeled commit:
+
+----
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+=== Pre-Reconciliation Baseline Anchor
+
+Tag:
+
+----
+recovery/pre-reconciliation-baseline-2026-09-15
+----
+
+Annotated tag object:
+
+----
+448c28880a24e7c599fd4fe2b2bea2de2079f51d
+----
+
+Peeled commit:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+The annotated tag object IDs and peeled commit IDs are intentionally different.
+The tag objects carry annotation metadata and resolve to the commits that define
+the recovery anchors.
+
+== Independent Recovery Bundle
+
+Primary bundle:
+
+----
+/home/landonr/awake-in-omelas-canon-recovery-2026-09-15.bundle
+----
+
+SHA-256:
+
+----
+b4801c1a50164c94d3b46344f494b1c01ec78cf3b7697178701fc9d40735aa19
+----
+
+`git bundle verify` reports:
+
+* the bundle is valid;
+* the bundle records a complete history;
+* the bundle contains the expected recovery tags;
+* the bundle contains `feature/initial-canon-entries`;
+* the bundle contains `feature/architectural-separation-phase-a`.
+
+The bundle therefore provides an independent recovery mechanism for the relevant
+lineage and anchors.
+
+== Disaster-Recovery Copy
+
+A DR copy is preserved under:
+
+----
+/home/landonr/omelas-canon-refactor-resources
+----
+
+Observed contents include:
+
+----
+awake-in-omelas-canon-recovery-2026-09-15.bundle
+SHA256SUMS
+git-branch-reconciliation-investigation-pattern.adoc
+----
+
+The DR material is intentionally external to the active program-control Git
+repository.
+
+The program-control repository records its identity and evidence rather than
+requiring the recovery bundle itself to become part of normal Git history.
+
+== Canon-Lineage Investigation Findings
+
+The completed investigation established the following current findings:
+
+* `feature/initial-canon-entries` is a valid recovery/reconciliation source.
+* The post-`8b09975` lineage contains 12 linear commits ending at `8ec6666`.
+* Those commits were not merged into current `development`.
+* They were not cherry-picked into current `development`.
+* They were not carried into current `development` as patch-equivalent changes.
+* The stranded delta affects 36 paths.
+* 35 of those paths are absent from current `development`.
+* One path exists in evolved or different form:
+
+----
+scripts/canon-bootstrap-canon-entries-tziphora.bash
+----
+
+The investigation also established that the actual Tziphora canon content remains
+byte-identical in current `development`.
+
+The stranded material in that case is the improved generator rather than the
+canon content itself.
+
+== Identified Canon Slices
+
+The genuinely missing canon material has been grouped into four coherent semantic
+slices:
+
+. Abramson / photograph / family memory
+. ATON / machine witness / recovery
+. PURGE / suppression / forgetting
+. Eliezer / guardrail / unintended recovery
+
+These slices are reconciliation subjects.
+
+Their presence in the stranded lineage does not imply that the complete historical
+branch should be integrated.
+
+== Bootstrap and Generation Material
+
+The stranded lineage also contains shared canon-bootstrap framework material and
+generation scripts.
+
+Their future architectural disposition has not been decided.
+
+Possible outcomes may include retention, migration, archival treatment, retirement,
+or another explicitly governed disposition.
+
+No such outcome is admitted by this checkpoint.
+
+== Exploratory Counterfactual
+
+The following hypothesis is currently under exploration:
+
+----
+retain canon content and associated provenance,
+but retire the historical generation scripts as active tooling
+----
+
+This is not an admitted decision.
+
+It must not be treated as:
+
+* a C0-R entry condition;
+* a C0-R exit condition;
+* an architectural requirement;
+* an authorization to delete tooling;
+* an authorization to exclude tooling from reconciliation analysis.
+
+The hypothesis remains decision-analysis material until explicitly admitted,
+rejected, or superseded.
+
+== C0-R Governance Constraints
+
+The following controls apply during C0-R:
+
+* wholesale merge of `feature/initial-canon-entries` is prohibited;
+* rebase of the stranded lineage into the current architecture branch is prohibited;
+* indiscriminate cherry-picking of the stranded lineage is prohibited;
+* selective reconciliation is required;
+* reconciliation must remain reviewable;
+* provenance must be preserved;
+* canon content must be evaluated separately from historical tooling where their
+  responsibilities differ;
+* shared bootstrap/framework material must be evaluated according to current
+  responsibility rather than historical co-location;
+* no tooling-retention decision may be inferred merely from preserving the recovery
+  lineage;
+* no architectural extraction begins as part of C0-R.
+
+== Selective Reconciliation Model
+
+C0-R governs reconciliation by semantic responsibility rather than by historical
+branch membership.
+
+The working model is:
+
+----
+stranded lineage
+      |
+      +-- canon content + provenance
+      |
+      +-- bootstrap / framework material
+      |
+      +-- historical generation tooling
+----
+
+Each class is evaluated independently.
+
+Historical co-location in Git is evidence of lineage, not proof of future
+architectural ownership.
+
+== C0-R Entry Conditions
+
+C0-R may proceed because:
+
+* M2 is complete;
+* `feature/architectural-separation-phase-a` exists at the accepted baseline;
+* the recovery source branch has been identified;
+* the divergence boundary has been identified;
+* recovery tags exist;
+* the tag targets have been independently verified;
+* an independent complete-history Git bundle exists;
+* its SHA-256 is recorded;
+* a DR copy exists;
+* the stranded lineage has been investigated sufficiently to identify coherent
+  reconciliation subjects.
+
+== C0-R Exit Conditions
+
+C0-R is complete only when:
+
+. the stranded canon lineage has been accounted for;
+. the canon slices selected for reconciliation are explicitly identified;
+. provenance requirements are defined for reconciled material;
+. shared bootstrap/framework material has been classified for further handling;
+. historical generation tooling has either:
+  * an explicitly admitted disposition; or
+  * an explicitly preserved unresolved decision state;
+. a selective reconciliation plan has been reviewed and admitted;
+. recovery evidence remains sufficient to reconstruct the source lineage;
+. no wholesale integration of the recovery branch has occurred;
+. the resulting program-control state explicitly authorizes transition to C1.
+
+== C1 Relationship
+
+C1 — Phase A Responsibility Inventory remains blocked during C0-R.
+
+C0-R answers:
+
+----
+What historical and canon material must be accounted for?
+----
+
+C1 answers:
+
+----
+What responsibilities remain in the resulting system,
+and who should own them?
+----
+
+This ordering prevents architectural responsibility analysis from being performed
+against an incomplete or misunderstood view of canon history.
+
+== Authority Boundary
+
+This record establishes recovery evidence and C0-R governance constraints.
+
+It does not:
+
+* recover canon into the current architecture branch;
+* merge `feature/initial-canon-entries`;
+* cherry-pick any stranded commits;
+* move files;
+* delete files;
+* change repository topology;
+* begin C1;
+* authorize architectural extraction;
+* decide the future of historical generation scripts;
+* stage, commit, or push implementation changes in `awake-in-omelas`.
+
+== Next Controlled Step
+
+After this record is reviewed, the next program-control action is to decide whether
+the C0-R control update, this evidence record, and the companion workflow UML are
+coherent enough to admit together.
+
+Only after admission should selective reconciliation execution be planned.
+

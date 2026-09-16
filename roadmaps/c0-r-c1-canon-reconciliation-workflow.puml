@@ -1,0 +1,131 @@
+@startuml
+title Awake in Omelas / KIOS — C0-R to C1 Governed Workflow
+
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor White
+  BorderColor Black
+  FontColor Black
+}
+skinparam note {
+  BackgroundColor White
+  BorderColor Black
+}
+
+start
+
+:M2 — Create Architecture Branch\nDONE;
+
+note right
+Current architecture branch:
+feature/architectural-separation-phase-a
+
+Baseline:
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+end note
+
+:C0-R — Canon Lineage Reconciliation\nNEXT;
+
+note right
+Purpose:
+Account for stranded canon lineage
+before architectural classification begins.
+end note
+
+:Verify recovery evidence;
+
+note right
+Evidence includes:
+- recovery tags
+- recovery Git bundle
+- SHA-256
+- complete-history verification
+- DR copy
+end note
+
+if (Recovery anchors verified?) then (yes)
+  :Inventory stranded lineage;
+else (no)
+  :STOP / reassess recovery evidence;
+  stop
+endif
+
+:Separate semantic concerns;
+
+fork
+  :Canon content + provenance;
+fork again
+  :Bootstrap/framework material;
+fork again
+  :Historical generation tooling;
+end fork
+
+note right
+Known canon slices:
+- Abramson / photograph / family memory
+- ATON / machine witness / recovery
+- PURGE / suppression / forgetting
+- Eliezer / guardrail / unintended recovery
+end note
+
+:Define selective reconciliation plan;
+
+note right
+Governance constraint:
+NO wholesale merge of
+feature/initial-canon-entries.
+
+Reconciliation must be selective,
+reviewable, and provenance-preserving.
+end note
+
+note left
+Exploratory only:
+"retain canon + provenance,
+retire historical generators"
+
+This is NOT an admitted decision.
+Tooling disposition remains open.
+end note
+
+if (C0-R exit criteria satisfied?) then (yes)
+  :Admit C0-R checkpoint;
+else (no)
+  :C1 remains BLOCKED;
+  stop
+endif
+
+:C1 — Phase A Responsibility Inventory\nUNBLOCKED / NEXT;
+
+note right
+Classify responsibilities into:
+- Omelas
+- KIOS
+- GAE
+- Runtime / MCP
+- Historical
+- Unresolved
+end note
+
+:Build responsibility matrix;
+
+note right
+C1 does not move files yet.
+
+It establishes what exists,
+what responsibility it represents,
+and who should own it.
+end note
+
+:M3 — Responsibility Map Accepted;
+
+:C2 — Phase B Boundary Design;
+
+stop
+
+legend bottom
+  C0-R answers: "What historical/canon material must be accounted for?"
+  C1 answers:   "What responsibilities remain, and who should own them?"
+endlegend
+
+@enduml
