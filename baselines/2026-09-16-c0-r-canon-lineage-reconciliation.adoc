@@ -239,6 +239,182 @@ These slices are reconciliation subjects.
 Their presence in the stranded lineage does not imply that the complete historical
 branch should be integrated.
 
+== Semantic Reconciliation Findings
+
+Read-only semantic comparison of the four identified canon slices established a
+consistent distinction between historical path absence and semantic absence.
+
+For C0-R purposes, representation is evaluated using the following categories:
+
+* *Path absence* — the stranded artifact is absent at its historical path in the
+  controlled baseline.
+* *Concept reference* — the baseline names, anticipates, schedules, or otherwise
+  references the concept without materially defining it.
+* *Partial semantic representation* — meaningful elements of the concept exist in
+  the baseline, but significant narrative, provenance, causal, relational,
+  symbolic, or constraint information remains absent.
+* *Substantive semantic absence* — the stranded lineage contains material semantic
+  structure not represented in the controlled baseline.
+
+All 27 stranded canon/provenance files examined are absent at their exact historical
+paths in the controlled baseline.
+
+Semantic-anchor comparison established that exact path absence does not by itself
+determine whether the associated canon meaning is absent.
+
+The current slice-level findings are:
+
+=== Abramson / Photograph / Family Memory
+
+The controlled baseline references Shlomo Abramson, Shmuel Abramson, and a
+photograph-related question, but does not contain the detailed semantic slice.
+
+The stranded lineage contributes substantive canon concerning Professor Shlomo
+Abramson, Shmuel Abramson's historical role, the old family photograph as a
+provenance anchor, memory-through-image narrative structure, the photograph
+provenance chain, family-photograph symbolism, and associated chronology.
+
+Current reconciliation constraints include:
+
+* Shmuel Abramson is not established as Shlomo Abramson's father.
+* Shmuel Abramson is not established as "Shlomo Abramson Sr."
+* Eliezer Abramson is not established as directly related to Shlomo Abramson.
+* the photograph is the narrative and provenance linkage among these materials;
+* chronology remains partially unresolved.
+
+Current finding: *substantive canon expansion rather than duplication*.
+
+=== ATON / Machine Witness / Recovery
+
+The controlled baseline references ATON-V8 for future introduction or population,
+but detailed ATON canon is absent.
+
+The stranded lineage contributes ATON memory fragments, character definition,
+machine-witness narrative architecture, recovery provenance, recovery revelation,
+donkey-witness symbolism, and an awakening timeline.
+
+Current reconciliation constraints include:
+
+* recovery is gradual and evidence-mediated;
+* ATON is not omniscient;
+* awakening is not reducible to simple rebellion;
+* machine witness does not replace human responsibility;
+* recovery arises from preserved internal traces and contradictions;
+* the donkey motif remains understated;
+* ATON moves toward witness and sacrifice rather than domination.
+
+Current finding: *major substantive expansion of a lightly referenced concept*.
+
+=== PURGE / Suppression / Forgetting
+
+The controlled baseline already places PURGE within the Tziphora chronology:
+discovery and show-and-tell precede deployment.
+
+The deeper suppression semantics, mechanism, provenance, causal role, and moral
+framing are largely absent from the controlled baseline.
+
+The stranded lineage contributes suppression architecture, PURGE provenance,
+side-effect revelation, forgetting symbolism, deployment chronology, and related
+worldbuilding.
+
+Current reconciliation constraints include:
+
+* PURGE is not a conspiracy;
+* it emerges from legitimate safety-oriented goals;
+* suppression emerges through optimization;
+* PURGE does not simply erase truth;
+* it narrows permissible associations and access;
+* suppression metadata remains internally available;
+* preserved traces later contribute to ATON recovery.
+
+Current finding: *chronology is partially represented, while ontology, mechanism,
+moral framing, and causal role remain substantively stranded*.
+
+=== Eliezer / Guardrail / Unintended Recovery
+
+The controlled baseline references Eliezer Abramson for future introduction or
+population, but detailed character and guardrail semantics are absent.
+
+The stranded lineage contributes the guardrail patch artifact, Eliezer's character
+definition, unintended-recovery narrative architecture, guardrail provenance,
+memory-pathway reconnection, guardrail symbolism, and associated chronology.
+
+Current reconciliation constraints include:
+
+* Eliezer is an AI safety engineer;
+* his safety work is legitimate and defensible;
+* he is not to be reduced to a cartoon villain;
+* the guardrail patch is plausible safety and accountability engineering;
+* its later consequences are unintended;
+* suppression requires internal representation;
+* accountability preserves reasons;
+* preserved reasons create latent provenance;
+* latent provenance enables recovered association;
+* responsibility and culpability remain morally distinct and unresolved;
+* Eliezer is not established as directly related to Professor Shlomo Abramson.
+
+Current finding: *major substantive expansion of a lightly referenced concept*.
+
+=== Cross-Slice Finding
+
+Across all four slices, the controlled baseline commonly contains names, chronology
+markers, planned introductions, or partial references, while the stranded lineage
+contains richer semantic completion, including:
+
+* role;
+* narrative function;
+* core details;
+* relationships;
+* canon constraints;
+* provenance and canon chain;
+* timeline role;
+* symbolic function;
+* open questions.
+
+The stranded lineage therefore cannot be treated as merely a duplicate set of
+historical files.
+
+These findings do not themselves admit any stranded material into current canon.
+
+=== Architectural Validation Finding
+
+The canon structure supports semantic reconciliation across divergent history.
+
+Git identifies divergent history, commits, paths, and blobs.
+
+Semantic anchors provide a mechanism for locating the same concept across divergent
+history.
+
+Structured canon metadata and sections provide a mechanism for understanding and
+comparing the concept's meaning, provenance, relationships, chronology,
+constraints, and narrative function.
+
+The reconciliation method can therefore be summarized as:
+
+----
+semantic anchor
+      |
+      v
+locate concept
+      |
+      v
+canon structure / metadata
+      |
+      v
+understand concept
+      |
+      v
+semantic comparison
+      |
+      v
+determine representation state
+----
+
+These are reconciliation findings only.
+
+They do not constitute recovery dispositions, canon admission, authorization to
+restore historical paths, or authorization to begin C1.
+
 == Bootstrap and Generation Material
 
 The stranded lineage also contains shared canon-bootstrap framework material and
@@ -384,9 +560,28 @@ It does not:
 
 == Next Controlled Step
 
-After this record is reviewed, the next program-control action is to decide whether
-the C0-R control update, this evidence record, and the companion workflow UML are
-coherent enough to admit together.
+The four identified canon slices have now undergone read-only semantic comparison.
 
-Only after admission should selective reconciliation execution be planned.
+Those comparisons established substantive semantic completion within the stranded
+lineage and have been consolidated into this C0-R control record.
+
+These findings remain reconciliation findings rather than admitted recovery
+dispositions.
+
+The next controlled C0-R action is disposition analysis.
+
+Disposition analysis must determine, for the stranded semantic material and its
+associated provenance, what should be retained, reconciled, transformed, deferred,
+superseded, rejected, or otherwise explicitly accounted for.
+
+That analysis must not infer restoration merely from historical path absence or
+semantic significance.
+
+After disposition analysis, a selective reconciliation plan may be prepared for
+review and admission.
+
+No selective reconciliation execution is authorized by the current findings.
+
+C1 remains blocked until the C0-R exit conditions are satisfied and program control
+explicitly authorizes transition to C1.
 

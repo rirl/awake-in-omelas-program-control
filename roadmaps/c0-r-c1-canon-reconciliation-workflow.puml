@@ -24,7 +24,7 @@ Baseline:
 9df5dd837800cecca3db31bff4bba48cd2342b9f
 end note
 
-:C0-R — Canon Lineage Reconciliation\nNEXT;
+:C0-R — Canon Lineage Reconciliation\nACTIVE;
 
 note right
 Purpose:
@@ -66,6 +66,41 @@ Known canon slices:
 - ATON / machine witness / recovery
 - PURGE / suppression / forgetting
 - Eliezer / guardrail / unintended recovery
+end note
+
+:Compare semantic representation;
+
+note right
+Representation states:
+- path absence
+- concept reference
+- partial semantic representation
+- substantive semantic absence
+end note
+
+:Consolidate semantic findings;
+
+note right
+Current finding:
+the stranded lineage contains
+substantive semantic completion,
+not merely duplicate files.
+
+These findings are NOT
+recovery dispositions.
+end note
+
+:Disposition analysis\nCURRENT NEXT STEP;
+
+note right
+Determine what should be:
+- retained
+- reconciled
+- transformed
+- deferred
+- superseded
+- rejected
+- otherwise accounted for
 end note
 
 :Define selective reconciliation plan;
