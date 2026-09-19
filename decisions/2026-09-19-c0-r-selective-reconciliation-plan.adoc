@@ -1,0 +1,376 @@
+= C0-R Selective Reconciliation Plan
+:revdate: 2026-09-19
+
+== Status
+
+Selected reconciliation method for C0-R — Canon Lineage Reconciliation.
+
+This decision defines how canon material selected by the admitted C0-R dispositions
+may be reconciled from the stranded lineage into the controlled canon state.
+
+It does not perform reconciliation itself.
+
+Selective reconciliation execution is not authorized by creation of this document.
+
+C1 remains blocked.
+
+== Scope
+
+Controlled repository:
+
+----
+awake-in-omelas
+----
+
+Controlled architecture branch:
+
+----
+feature/architectural-separation-phase-a
+----
+
+Controlled architecture baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+Stranded recovery source:
+
+----
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Divergence boundary:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+Admitted C0-R disposition checkpoint:
+
+----
+c16c95a503cb3f55574e962f6116273c894650c1
+----
+
+The stranded lineage is a recovery source.
+
+It is not an integration target.
+
+== Reconciliation Principle
+
+C0-R reconciliation is performed by semantic responsibility rather than by:
+
+* historical path;
+* historical file grouping;
+* branch membership;
+* historical implementation mechanism.
+
+Historical co-location is evidence of lineage, not proof of current architectural
+ownership.
+
+== Material Selected for Reconciliation
+
+=== Abramson / Photograph / Family Memory
+
+Reconcile:
+
+* Professor Shlomo Abramson as historian/professor and human historical witness;
+* memory as moral obligation;
+* resistance to epistemic closure;
+* Shmuel Abramson as pre-war historical/recovered witness;
+* the old family photograph as material witness and provenance anchor;
+* Memory Through Image narrative architecture;
+* photograph-mediated linkage among historical layers;
+* textual witness, visual/historical witness, and machine witness relationships.
+
+Preserve unresolved:
+
+* exact Shmuel/Shlomo relationship;
+* exact Shmuel/photograph relationship;
+* unsupported photograph contents;
+* exact Professor Abramson lecture chronology and event;
+* exact first ATON correlation mechanism;
+* physical versus digital photograph survival mode.
+
+Do not admit as current canon:
+
+* Shmuel Abramson as Shlomo Abramson's father;
+* Shmuel Abramson as "Shlomo Abramson Sr.";
+* Eliezer Abramson as directly related to Professor Shlomo Abramson;
+* supernatural or magical photograph behavior.
+
+=== ATON / Machine Witness / Recovery
+
+Reconcile:
+
+* ATON as machine witness;
+* epistemic and moral awakening rather than simple rebellion;
+* recovery through preserved traces and contradictions;
+* partial, interpretive, and non-omniscient recovery;
+* institutional forgetting exposed through machine witness;
+* reconstructed relationships rather than pristine hidden archives;
+* cost and sacrifice associated with witness;
+* donkey-witness symbolism.
+
+Preserve unresolved:
+
+* first recovered association;
+* exact linkage among Tziphora, Abramson, the photograph, Shmuel, and the girl in
+  the red coat;
+* exact chronology;
+* exact phenomenology of ATON's recovery;
+* exact verification mechanism;
+* final-sacrifice mechanics;
+* degree of explicit in-world donkey symbolism.
+
+Do not admit as current canon:
+
+* instantaneous awakening;
+* omniscient recovery;
+* simple AI rebellion;
+* domination framing;
+* pristine intact hidden archive.
+
+=== PURGE / Suppression / Forgetting
+
+Reconcile:
+
+* PURGE as emergent safety and knowledge-sanitization infrastructure;
+* safety preceding suppression;
+* suppression emerging through optimization rather than conspiracy;
+* forgetting as narrowing of permissible associations;
+* disconnection from truth rather than simple erasure;
+* retained suppression representation or metadata;
+* preserved traces contributing to ATON recovery.
+
+Preserve unresolved:
+
+* exact implementation;
+* exact retained-record form;
+* operational scope;
+* exact deployment mechanics;
+* chronology beyond supported broad ordering.
+
+Do not admit as current canon:
+
+* centralized conspiracy;
+* deliberate truth erasure as primary intent.
+
+=== Eliezer / Guardrail / Unintended Recovery
+
+Reconcile:
+
+* Eliezer Abramson as an AI safety engineer;
+* legitimate safety and accountability intent;
+* guardrail work preserving or exposing explanatory suppression context;
+* unintended consequences;
+* gradual recovery;
+* preserved reasons producing latent provenance;
+* latent provenance enabling recovered association;
+* distinction between responsibility and culpability;
+* morally ambivalent guardrail symbolism.
+
+Preserve unresolved:
+
+* exact patch mechanism;
+* logs versus audit trail versus reversible masking;
+* exact deployment motivation;
+* whether Eliezer understands what he enabled;
+* later relationship to ATON's actions;
+* exact non-genealogical relationship to Professor Abramson;
+* exact chronology.
+
+Do not admit as current canon:
+
+* Eliezer directly related to Professor Shlomo Abramson;
+* Eliezer directly related to Shmuel Abramson;
+* Eliezer as malicious architect;
+* magical or instantaneous awakening mechanism.
+
+== Cross-Slice Causal Constraint
+
+The reconciled canon must remain compatible with:
+
+----
+PURGE suppresses associations
+        |
+        v
+internal traces remain
+        |
+        v
+Eliezer's guardrail/accountability work preserves
+or exposes explanatory context
+        |
+        v
+surviving traces become more connectable
+        |
+        v
+ATON reconstructs relationships
+        |
+        v
+recovery requires interpretation, verification,
+and correction
+----
+
+This relationship must not be transformed into:
+
+* intentional conspiracy;
+* pristine archival recovery;
+* omniscient machine memory;
+* instantaneous awakening.
+
+== Provenance Requirements
+
+Selective reconciliation must preserve or explicitly reference:
+
+* stranded-lineage identity;
+* relevant source commit identities;
+* verified recovery tags;
+* provenance identifiers;
+* checkpoint relationships;
+* ambiguity where evidence conflicts;
+* authoritative versus non-authoritative evidence status;
+* sufficient source information to reconstruct why each reconciled assertion exists.
+
+Provenance must remain traceable to the recovery source without requiring restoration
+of historical files.
+
+== Target Representation
+
+Historical paths are not automatically restored.
+
+The target representation must:
+
+* fit the current controlled canon organization;
+* preserve semantic responsibility;
+* avoid using historical co-location as an ownership rule;
+* keep unresolved assertions visibly unresolved;
+* preserve provenance independently of file layout;
+* avoid architecture decisions belonging to C1.
+
+Exact target filenames and file boundaries must be determined through read-only
+inspection of the controlled canon before execution is authorized.
+
+== Bootstrap / Framework Boundary
+
+The following historical concepts remain eligible for later architectural use:
+
+* structured canon entries;
+* provenance relationships;
+* explicit status distinctions;
+* revision and supersession history;
+* relationships and dependencies;
+* checkpoints;
+* derived indexes and views;
+* reconstructability;
+* integrity and audit concepts.
+
+This decision does not select a future implementation for those concepts.
+
+== Historical Generation Tooling
+
+Historical generation tooling is *HISTORICAL-ONLY*.
+
+The following are not selected for restoration:
+
+* `scripts/canon-bootstrap*.bash`;
+* `scripts/lib/canon-bootstrap-common.bash`;
+* slice-specific generators;
+* historical template, index, and repository-scaffolding generators.
+
+Their original content remains recoverable through Git history and C0-R recovery
+evidence.
+
+Any future canon automation requires separate architectural justification.
+
+== Selected Execution Method
+
+When selective reconciliation is separately authorized:
+
+. inspect the current target canon structure;
+. identify the smallest appropriate target representation by semantic responsibility;
+. construct reconciled content from admitted semantic dispositions;
+. preserve unresolved assertions explicitly;
+. attach or record required provenance;
+. compare the proposed result against both the controlled baseline and recovery
+  source;
+. verify rejected assertions were not introduced;
+. verify historical generation tooling was not restored;
+. review the complete resulting diff;
+. admit only the reviewed selective result.
+
+== Prohibited Integration Methods
+
+The following methods are not selected:
+
+* wholesale merge of the recovery branch;
+* rebase against the recovery branch;
+* indiscriminate cherry-pick sequence;
+* restoration of historical paths merely because those paths existed in the
+  stranded lineage;
+* restoration of historical Bash generation tooling as part of canon recovery.
+
+== Preconditions for Execution
+
+Before any canon modification:
+
+* this plan must be reviewed and admitted in program-control;
+* `awake-in-omelas` must remain on the controlled architecture branch;
+* the controlled architecture baseline must remain accounted for;
+* the recovery source must remain reconstructable;
+* current target representation must be inspected read-only;
+* proposed target files must be explicitly identified;
+* reconciliation boundaries must remain consistent with the admitted C0-R
+  dispositions.
+
+If these conditions are not satisfied, execution must stop.
+
+== Validation Required After Reconciliation
+
+Before selective reconciliation can be considered successful:
+
+* every admitted `RECONCILE` item must be accounted for;
+* every `PRESERVE-UNRESOLVED` item must remain unresolved unless separately admitted;
+* every `REJECT AS CURRENT CANON` assertion must remain absent as canon fact;
+* provenance must remain reconstructable;
+* historical Bash generation tooling must remain unrestored;
+* unsupported historical-path assumptions must not be introduced;
+* no wholesale branch integration may occur;
+* architectural responsibilities belonging to C1 must not be decided prematurely;
+* resulting canon must remain internally coherent across all four slices.
+
+== Authority Boundary
+
+This decision authorizes only the selective reconciliation method.
+
+It does not:
+
+* modify canon;
+* restore historical files;
+* merge the recovery branch;
+* cherry-pick the stranded lineage;
+* restore historical generation tooling;
+* determine future KIOS/Omelas responsibility boundaries;
+* authorize C1.
+
+== Expected Postcondition
+
+After this plan is admitted, the C0-R exit-condition requirement for a reviewed and
+admitted selective reconciliation plan will be satisfied.
+
+Plan admission alone does not complete C0-R.
+
+Selective reconciliation must still be executed and validated before program-control
+can determine whether all remaining C0-R exit conditions are satisfied.
+
+== Next Control Step
+
+After this decision is admitted:
+
+. inspect the current controlled canon representation read-only;
+. identify proposed target files by semantic responsibility;
+. prepare a selective reconciliation execution proposal;
+. review that proposal before modifying canon.
+
+C1 remains blocked until C0-R exit conditions are satisfied and program-control
+explicitly authorizes transition.
