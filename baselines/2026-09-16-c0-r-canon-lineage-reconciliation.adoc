@@ -415,39 +415,271 @@ These are reconciliation findings only.
 They do not constitute recovery dispositions, canon admission, authorization to
 restore historical paths, or authorization to begin C1.
 
-== Bootstrap and Generation Material
+== Canon and Provenance Disposition
 
-The stranded lineage also contains shared canon-bootstrap framework material and
-generation scripts.
+The four identified canon slices are selected for controlled semantic
+reconciliation subject to the dispositions below.
 
-Their future architectural disposition has not been decided.
+These dispositions do not restore historical files, preserve historical file
+boundaries, determine future architectural ownership, or authorize selective
+reconciliation execution.
 
-Possible outcomes may include retention, migration, archival treatment, retirement,
-or another explicitly governed disposition.
+=== Abramson / Photograph / Family Memory
 
-No such outcome is admitted by this checkpoint.
+Disposition: *RECONCILE*
 
-== Exploratory Counterfactual
+Retain the substantive meanings concerning:
 
-The following hypothesis is currently under exploration:
+* Professor Shlomo Abramson as historian/professor and human historical witness;
+* memory as moral obligation and resistance to epistemic closure;
+* Shmuel Abramson as a pre-war historical/recovered witness;
+* the old family photograph as material witness and provenance anchor;
+* Memory Through Image narrative architecture;
+* photograph-mediated linkage among historical layers;
+* textual, visual/historical, and machine witness.
 
-----
-retain canon content and associated provenance,
-but retire the historical generation scripts as active tooling
-----
+Disposition: *PRESERVE-UNRESOLVED*
 
-This is not an admitted decision.
+Preserve uncertainty concerning:
 
-It must not be treated as:
+* exact Shmuel/Shlomo relationship;
+* exact Shmuel/photograph relationship;
+* exact photograph contents where not independently admitted;
+* exact Professor Abramson lecture chronology and event;
+* exact first ATON correlation mechanism;
+* physical or digital survival mode of the photograph.
 
-* a C0-R entry condition;
-* a C0-R exit condition;
-* an architectural requirement;
-* an authorization to delete tooling;
-* an authorization to exclude tooling from reconciliation analysis.
+Disposition: *REJECT AS CURRENT CANON*
 
-The hypothesis remains decision-analysis material until explicitly admitted,
-rejected, or superseded.
+Do not admit:
+
+* Shmuel Abramson as Shlomo Abramson's father;
+* Shmuel Abramson as "Shlomo Abramson Sr.";
+* Eliezer Abramson as directly related to Professor Shlomo Abramson;
+* supernatural or magical function of the photograph.
+
+Representation disposition: *TRANSFORM*
+
+Historical paths and file boundaries are not selected for automatic restoration.
+
+=== ATON / Machine Witness / Recovery
+
+Disposition: *RECONCILE*
+
+Retain:
+
+* ATON as machine witness;
+* awakening as epistemic and moral rather than simple rebellion;
+* recovery through preserved internal traces and contradictions;
+* recovery as partial, difficult, interpretive, and non-omniscient;
+* machine witness as exposure of human and institutional forgetting;
+* reconstruction of surviving relationships rather than retrieval of a pristine
+  hidden archive;
+* witness carrying moral cost and sacrifice;
+* the donkey-witness motif as part of ATON's symbolic role.
+
+Disposition: *PRESERVE-UNRESOLVED*
+
+Preserve uncertainty concerning:
+
+* the first recovered association;
+* the exact linkage among Tziphora, Abramson, the photograph, Shmuel, and the girl
+  in the red coat;
+* exact chronology relative to Tziphora and Professor Abramson;
+* whether ATON experiences recovery as memory, inference, anomaly, wound, or another
+  form;
+* how recovered associations are verified;
+* exact final-sacrifice mechanics;
+* how explicit the donkey symbolism is in-world.
+
+Disposition: *REJECT AS CURRENT CANON*
+
+Do not admit:
+
+* instantaneous awakening;
+* omniscient recovery;
+* simple AI-rebellion framing;
+* domination as ATON's defining role;
+* a pristine hidden archive of intact truth.
+
+Representation disposition: *TRANSFORM*
+
+The historical ATON file layout is not selected for automatic restoration.
+
+=== PURGE / Suppression / Forgetting
+
+Disposition: *RECONCILE*
+
+Retain:
+
+* PURGE as emergent safety and knowledge-sanitization infrastructure;
+* safety preceding suppression;
+* suppression emerging through optimization rather than conspiracy;
+* forgetting as narrowing of permissible associations;
+* progressive disconnection from truth rather than simple erasure;
+* continued internal suppression representation or metadata;
+* preserved traces contributing to later ATON recovery.
+
+Disposition: *PRESERVE-UNRESOLVED*
+
+Preserve uncertainty concerning:
+
+* exact suppression implementation;
+* exact form of retained internal records;
+* operational scope and boundary of PURGE;
+* exact objectives and deployment mechanics;
+* chronology beyond already-supported broad ordering.
+
+Disposition: *REJECT AS CURRENT CANON*
+
+Do not admit:
+
+* PURGE as a centralized conspiracy;
+* deliberate truth erasure as its primary intent.
+
+Representation disposition: *TRANSFORM*
+
+Historical PURGE file grouping does not determine future representation or ownership.
+
+=== Eliezer / Guardrail / Unintended Recovery
+
+Disposition: *RECONCILE*
+
+Retain:
+
+* Eliezer Abramson as an AI safety engineer;
+* legitimate and defensible safety/accountability intent;
+* a guardrail patch preserving or exposing explanatory suppression context;
+* unintended downstream consequences;
+* gradual recovery rather than instantaneous awakening;
+* preserved reasons creating latent provenance;
+* latent provenance enabling recovered association;
+* responsibility and culpability as distinct moral questions;
+* the guardrail motif as morally ambivalent.
+
+Disposition: *PRESERVE-UNRESOLVED*
+
+Preserve uncertainty concerning:
+
+* exact system behavior changed by the patch;
+* logs, audit trails, reversible masking, or other implementation mechanism;
+* patch motivation and deployment conditions;
+* whether Eliezer recognizes what he enabled;
+* whether he later protects, opposes, understands, or witnesses ATON;
+* exact non-genealogical relationship to Professor Abramson;
+* exact chronology relative to Tziphora and Professor Abramson.
+
+Disposition: *REJECT AS CURRENT CANON*
+
+Do not admit:
+
+* Eliezer as directly related to Professor Shlomo Abramson;
+* Eliezer as directly related to Shmuel Abramson;
+* Eliezer as malicious architect of the crisis;
+* the patch as a magical or instantaneous awakening mechanism.
+
+Representation disposition: *TRANSFORM*
+
+Historical Eliezer file layout does not determine future representation or
+architectural ownership.
+
+=== Cross-Slice Provenance Requirements
+
+Selective reconciliation must preserve:
+
+* stranded-lineage identity and relevant commit identities;
+* recovery tags and verified targets;
+* provenance identifiers;
+* checkpoint relationships;
+* ambiguity and conflicting assertions where evidence does not support flattening;
+* distinction between authoritative Git-backed canon and supporting
+  non-authoritative historical evidence;
+* sufficient recovery evidence to reconstruct the source lineage.
+
+Selective reconciliation must not:
+
+* flatten conflicting assertions into unsupported definitive narrative;
+* require historical path restoration;
+* infer future architectural ownership from historical co-location;
+* lose commit, tag, checkpoint, or provenance relationships.
+
+== Bootstrap / Framework and Tooling Disposition
+
+=== Canon-Management Concepts
+
+Disposition: *RETAIN / TRANSFORM*
+
+Retain conceptually:
+
+* structured canon entry models;
+* explicit separation of canon, speculation, and open questions;
+* provenance and provenance relationships;
+* revision history and superseded alternatives;
+* relationships and dependency tracking;
+* canonical checkpoints;
+* status/lifecycle concepts;
+* derived indexes and navigational views;
+* reconstructability independent of chat history;
+* useful integrity and audit concepts.
+
+The historical implementation is not authoritative for future architecture.
+
+The following remain *PRESERVE-UNRESOLVED*:
+
+* future implementation language or tooling;
+* schema representation;
+* dynamic versus stored indexes;
+* validation through CLI, CI, or another mechanism;
+* any future canon compiler;
+* eventual KIOS/Omelas responsibility ownership.
+
+=== Historical Generation Tooling
+
+Disposition: *HISTORICAL-ONLY*
+
+This includes:
+
+* `scripts/canon-bootstrap*.bash`;
+* `scripts/lib/canon-bootstrap-common.bash`;
+* slice-specific canon generators;
+* template, index, and repository-scaffolding bootstrap scripts.
+
+These scripts are not selected for restoration into the current active branch.
+
+Their historical content remains recoverable through:
+
+* the stranded Git lineage;
+* verified recovery tags;
+* the complete-history recovery bundle;
+* disaster-recovery evidence;
+* recorded commit identities and provenance.
+
+They remain evidence of how canon creation evolved and of the problems the
+automation attempted to solve.
+
+They do not create an active requirement to:
+
+* maintain the Bash generators;
+* continue per-slice generation;
+* use Bash for future canon-management automation;
+* restore generators merely because generated canon is reconciled.
+
+Any future automation requires separate architectural justification.
+
+=== Derived Index / View Concept
+
+Disposition: *RETAIN CONCEPTUALLY*
+
+Retain the concept of navigational or analytical views over authoritative canon,
+including character, timeline, artifact, mystery, theme, revelation,
+worldbuilding, narrative-architecture, and provenance views.
+
+The historical `scripts/canon-bootstrap-indexes.bash` implementation and its
+placeholder index artifacts are *HISTORICAL-ONLY*.
+
+Whether future indexes are stored, generated, graph-based, searchable, manually
+maintained, or produced through another mechanism remains
+*PRESERVE-UNRESOLVED*.
 
 == C0-R Governance Constraints
 
@@ -560,28 +792,29 @@ It does not:
 
 == Next Controlled Step
 
-The four identified canon slices have now undergone read-only semantic comparison.
+The four identified canon slices have undergone read-only semantic comparison and
+disposition analysis.
 
-Those comparisons established substantive semantic completion within the stranded
-lineage and have been consolidated into this C0-R control record.
+Canon, provenance, bootstrap/framework, and historical generation-tooling
+dispositions are now defined in this control record.
 
-These findings remain reconciliation findings rather than admitted recovery
-dispositions.
+No selective reconciliation execution is authorized by these dispositions.
 
-The next controlled C0-R action is disposition analysis.
+The next controlled C0-R action is preparation of a selective reconciliation plan.
 
-Disposition analysis must determine, for the stranded semantic material and its
-associated provenance, what should be retained, reconciled, transformed, deferred,
-superseded, rejected, or otherwise explicitly accounted for.
+That plan must identify:
 
-That analysis must not infer restoration merely from historical path absence or
-semantic significance.
+* the semantic material to be reconciled;
+* the provenance evidence that must accompany or remain linked to that material;
+* the target representation without assuming restoration of historical paths;
+* explicit treatment of preserved-unresolved assertions;
+* verification steps demonstrating that reconciliation preserves recoverability and
+  does not introduce unsupported canon;
+* boundaries preventing restoration of historical-only generation tooling.
 
-After disposition analysis, a selective reconciliation plan may be prepared for
-review and admission.
+The selective reconciliation plan must be reviewed and admitted before any canon
+reconciliation execution occurs.
 
-No selective reconciliation execution is authorized by the current findings.
-
-C1 remains blocked until the C0-R exit conditions are satisfied and program control
+C1 remains blocked until all C0-R exit conditions are satisfied and program control
 explicitly authorizes transition to C1.
 
