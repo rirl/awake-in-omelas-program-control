@@ -1,0 +1,343 @@
+= C0-R Selective Reconciliation Execution Authorization
+:revdate: 2026-09-28
+:status: PROPOSED
+
+== Status
+
+Proposed execution authorization for C0-R — Canon Lineage Reconciliation.
+
+This document authorizes construction of the bounded selective-reconciliation
+working-tree result only if this authorization is reviewed and admitted.
+
+It does not itself perform reconciliation.
+
+It does not authorize admission of the resulting canon changes into Git.
+
+C1 remains blocked.
+
+== Authority
+
+Execution is governed by the admitted C0-R control chain, including:
+
+* the C0-R canon-lineage reconciliation record;
+* the C0-R semantic reconciliation findings;
+* the C0-R disposition analysis;
+* the C0-R Selective Reconciliation Plan;
+* the C0-R Selective Reconciliation Execution Proposal;
+* the C0-R Reconciliation Provenance Resolution;
+* the controlled Awake in Omelas architecture baseline.
+
+If this authorization conflicts with an earlier admitted semantic constraint,
+the earlier admitted semantic constraint remains controlling.
+
+== Controlled Program-Control State
+
+Program-control repository:
+
+----
+awake-in-omelas-program-control
+----
+
+Required admission baseline for this authorization:
+
+----
+98bdfcfe1a76aae77095aea69837325de9a237a9
+----
+
+That commit admits the C0-R reconciliation provenance resolution.
+
+== Controlled Canon State
+
+Canon repository:
+
+----
+awake-in-omelas
+----
+
+Authorized working branch:
+
+----
+feature/architectural-separation-phase-a
+----
+
+Required starting baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+Recovery source:
+
+----
+feature/initial-canon-entries
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Divergence boundary:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+Before execution begins, the canon repository must be verified to be on the
+authorized branch, at the required starting baseline, and clean.
+
+Any discrepancy is a stop condition.
+
+== Authorization
+
+Upon admission of this document, construction of the bounded C0-R selective
+reconciliation working-tree result is authorized.
+
+Authorization is limited to the eighteen files defined by the admitted
+execution proposal and provenance resolution:
+
+----
+14 semantic canon target files
+ 4 reconciliation provenance files
+--
+18 files total
+----
+
+Execution must be assertion-selective and semantic.
+
+The recovery branch is evidence and source material.
+
+It is not an integration target.
+
+== Authorized Semantic Canon Targets
+
+The following fourteen semantic canon targets are authorized for construction:
+
+----
+canon/artifacts/artifact-guardrail-patch.adoc
+canon/artifacts/artifact-old-family-photograph.adoc
+canon/characters/character-aton.adoc
+canon/characters/character-eliezer-abramson.adoc
+canon/characters/character-professor-shlomo-abramson.adoc
+canon/characters/character-shmuel-abramson.adoc
+canon/narrative-architecture/architecture-machine-witness.adoc
+canon/narrative-architecture/architecture-memory-through-image.adoc
+canon/narrative-architecture/architecture-unintended-recovery.adoc
+canon/symbols/symbol-donkey-witness.adoc
+canon/timeline/timeline-aton-awakening.adoc
+canon/timeline/timeline-guardrail-patch.adoc
+canon/timeline/timeline-purge-deployment.adoc
+canon/worldbuilding/world-purge.adoc
+----
+
+No historical path outside this set becomes authorized merely because it
+exists in the recovery lineage.
+
+== Authorized Reconciliation Provenance Targets
+
+The following four provenance records are authorized for construction:
+
+----
+canon/provenance/prov-0006-abramson-photograph-reconciliation.adoc
+canon/provenance/prov-0007-aton-recovery-reconciliation.adoc
+canon/provenance/prov-0008-purge-reconciliation.adoc
+canon/provenance/prov-0009-eliezer-guardrail-reconciliation.adoc
+----
+
+These records must be reconstructed as current decision-oriented provenance.
+
+Historical `prov-0006` through `prov-0009` content must not be restored
+unchanged.
+
+Reuse of those provenance identifiers preserves lineage continuity; it does
+not confer current authority on historical assertions.
+
+== Semantic Execution Rules
+
+For every assertion considered during execution:
+
+* `RECONCILE` assertions may be represented in current canon.
+* `PRESERVE-UNRESOLVED` assertions must remain visibly unresolved.
+* assertions rejected as current canon must not be admitted as facts.
+* historical wording is not authoritative merely because it appears in the
+  recovery branch.
+* historical file identity does not determine current semantic ownership.
+* current representation should be the smallest representation consistent
+  with the admitted execution proposal.
+* existing controlled canon must not be rewritten merely to recreate the
+  historical decomposition.
+
+== Existing Canon Constraints
+
+Execution must preserve existing controlled canon, including:
+
+* Tziphora discovers the book "Night";
+* the discovery precedes operational PURGE deployment;
+* the show-and-tell sequence precedes operational PURGE deployment;
+* Tziphora remains epistemically limited at the opening;
+* unresolved photograph / girl-in-red-coat relationships remain unresolved
+  unless separately admitted.
+
+== Cross-Slice Causal Constraint
+
+The reconciled representation must preserve the admitted broad causal chain:
+
+----
+PURGE suppresses associations
+        |
+        v
+internal traces remain
+        |
+        v
+Eliezer's guardrail/accountability work preserves or exposes explanatory context
+        |
+        v
+surviving traces become more connectable
+        |
+        v
+ATON reconstructs relationships
+        |
+        v
+recovery requires interpretation, verification, and correction
+----
+
+This must not be transformed into:
+
+* an intentional conspiracy;
+* pristine archival recovery;
+* omniscient machine memory;
+* instantaneous awakening.
+
+== Historical-Only Material
+
+Historical generation/bootstrap tooling remains `HISTORICAL-ONLY`.
+
+Execution does not authorize restoration of:
+
+* `scripts/canon-bootstrap*.bash`;
+* `scripts/lib/canon-bootstrap-common.bash`;
+* historical slice-specific generators;
+* historical template generators;
+* historical index generators;
+* historical repository-scaffolding generators.
+
+Their Git history remains sufficient for preservation.
+
+== Provenance Requirements
+
+Each of the four reconciliation provenance records must identify or reference,
+as applicable:
+
+* the controlled baseline;
+* recovery source and relevant recovery commits;
+* the divergence boundary;
+* relevant historical source files;
+* admitted C0-R disposition records;
+* the admitted selective-reconciliation plan;
+* the admitted execution proposal;
+* the admitted provenance resolution;
+* reconciled assertions;
+* preserved-unresolved assertions;
+* rejected assertions;
+* resulting canon targets.
+
+The resulting provenance must allow the reconciliation decision to be
+reconstructed without restoring the historical file decomposition.
+
+== Execution Method
+
+Execution shall proceed as a working-tree construction.
+
+The executor shall:
+
+. verify all control preconditions;
+. construct only the authorized eighteen-file set;
+. derive content assertion-by-assertion from admitted dispositions;
+. mark unresolved matters explicitly;
+. construct the four reconciliation provenance records;
+. compare the result with the controlled baseline and recovery evidence;
+. verify rejected assertions are absent;
+. verify historical-only tooling has not been restored;
+. inspect the complete working-tree diff;
+. perform cross-slice semantic validation;
+. stop before staging or committing the canon changes.
+
+== Mandatory Stop Conditions
+
+Execution must stop without staging or committing if:
+
+* the canon branch differs from the authorized branch;
+* canon HEAD differs from the required baseline before construction;
+* the canon working tree is not clean before construction;
+* the recovery source cannot be resolved;
+* an assertion cannot be classified under the admitted dispositions;
+* an unresolved assertion would need to be converted into a fact;
+* a rejected assertion would need to be admitted;
+* execution requires a nineteenth file;
+* execution requires modification of an existing file not explicitly
+  authorized;
+* historical tooling would need to be restored;
+* a C1 architectural-responsibility decision would be required;
+* the resulting cross-slice causal model conflicts with admitted constraints.
+
+A stop condition requires review before execution continues.
+
+== Explicitly Not Authorized
+
+This authorization does not authorize:
+
+* wholesale merge of `feature/initial-canon-entries`;
+* rebase onto the recovery branch;
+* indiscriminate cherry-picking;
+* restoration of the historical 27-file decomposition;
+* restoration of historical provenance records unchanged;
+* restoration of historical generation tooling;
+* modification outside the eighteen-file bounded set;
+* staging the resulting canon changes;
+* committing the resulting canon changes;
+* pushing canon changes;
+* declaring C0-R complete;
+* beginning C1.
+
+== Required Post-Execution Review
+
+After construction, but before any `git add`, the complete reconciliation
+working-tree result must be reviewed.
+
+Review must establish at minimum:
+
+* exactly the authorized eighteen files were created or changed;
+* every admitted `RECONCILE` responsibility is represented;
+* every `PRESERVE-UNRESOLVED` responsibility remains unresolved;
+* rejected assertions are absent as canon facts;
+* existing Tziphora / PURGE chronology remains intact;
+* the four provenance records reconstruct the decision lineage;
+* historical-only tooling remains absent;
+* no C1 responsibility allocation has been introduced;
+* the complete diff is semantically coherent across all four slices.
+
+== Admission Boundary
+
+Admission of this authorization permits construction and validation of the
+eighteen-file working-tree result.
+
+It does not authorize staging, committing, or pushing that result.
+
+A separate reviewed admission decision is required after inspection of the
+complete reconciliation diff.
+
+== C0-R and C1 State
+
+Admission of this authorization does not complete C0-R.
+
+C0-R remains active through execution, validation, review, and final admission
+of the reconciled canon baseline.
+
+C1 remains blocked until the C0-R exit conditions are explicitly verified and
+program-control authorizes transition.
+
+== Next Control Step
+
+Review this authorization as an untracked program-control draft.
+
+If admitted and synchronized, return to the controlled canon repository,
+re-verify its baseline and cleanliness, and begin bounded working-tree
+construction.
+
+Do not modify canon before this authorization is admitted and synchronized.
