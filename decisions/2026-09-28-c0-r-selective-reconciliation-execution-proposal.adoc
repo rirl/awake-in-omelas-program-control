@@ -1,0 +1,801 @@
+= C0-R Selective Reconciliation Execution Proposal
+:revdate: 2026-09-28
+:status: PROPOSED
+
+== Status
+
+Proposed execution plan for C0-R — Canon Lineage Reconciliation.
+
+This proposal translates the admitted C0-R semantic dispositions and selective-reconciliation method into a concrete target-representation plan.
+
+This document does not perform reconciliation.
+
+This document does not authorize canon modification.
+
+C1 remains blocked.
+
+== Authority
+
+This proposal is subordinate to:
+
+* the admitted C0-R canon-lineage reconciliation record;
+* the admitted C0-R semantic reconciliation findings;
+* the admitted C0-R disposition analysis;
+* the admitted C0-R Selective Reconciliation Plan;
+* the controlled Awake in Omelas architecture baseline.
+
+The recovery lineage remains evidence and source material.
+
+It is not an integration target.
+
+== Controlled State
+
+Controlled repository:
+
+----
+awake-in-omelas
+----
+
+Controlled branch:
+
+----
+feature/architectural-separation-phase-a
+----
+
+Controlled baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+Recovery source:
+
+----
+feature/initial-canon-entries
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Divergence boundary:
+
+----
+8b09975fc6ee3e85f9972e834cda155477e7a6cd
+----
+
+The recovery source contains 27 added canon/provenance AsciiDoc files examined during read-only target-representation inspection.
+
+Those 27 historical files are semantic source material.
+
+They are not a 27-file restoration manifest.
+
+== Execution Principle
+
+Selective reconciliation shall operate on semantic assertions rather than historical file identity.
+
+For each admitted assertion:
+
+. determine its semantic responsibility;
+. identify the smallest appropriate representation in the current canon;
+. preserve admitted uncertainty explicitly;
+. exclude assertions rejected as current canon;
+. preserve reconstructable provenance to the recovery lineage;
+. avoid restoring historical decomposition merely because it existed.
+
+A historical source file may therefore:
+
+* contribute content to a new current canon entry;
+* contribute content to an existing current canon entry;
+* contribute to more than one current representation;
+* be represented by another semantic structure;
+* remain historical-only;
+* or require no current file of its own.
+
+== Existing Canon Constraints
+
+The controlled canon already establishes the Tziphora opening thread.
+
+Reconciliation must preserve, at minimum:
+
+* Tziphora discovers the book "Night";
+* her discovery precedes operational PURGE deployment;
+* show-and-tell precedes operational PURGE deployment;
+* Tziphora remains epistemically limited during the opening;
+* the photograph/girl-in-red-coat relationship remains an open question unless separately admitted.
+
+Existing canon must not be rewritten merely to conform to the historical recovery-file decomposition.
+
+== Proposed Target Representation
+
+=== Abramson / Photograph / Family Memory
+
+==== Professor Shlomo Abramson
+
+Proposed target:
+
+----
+canon/characters/character-professor-shlomo-abramson.adoc
+----
+
+Create a CHARACTER representation for Professor Shlomo Abramson.
+
+Reconcile:
+
+* historian/professor;
+* human historical witness;
+* memory as moral obligation;
+* resistance to epistemic closure;
+* relationship to historical and visual witness.
+
+Preserve unresolved:
+
+* exact lecture chronology and event;
+* exact relationship to Shmuel Abramson;
+* exact relationship to the photograph beyond the admitted linkage;
+* exact first connection to ATON.
+
+Do not admit:
+
+* Shmuel as Shlomo's father;
+* Shmuel as "Shlomo Abramson Sr.";
+* Eliezer as a direct family relation.
+
+==== Shmuel Abramson
+
+Proposed target:
+
+----
+canon/characters/character-shmuel-abramson.adoc
+----
+
+Create a CHARACTER representation for Shmuel Abramson.
+
+Reconcile:
+
+* pre-war historical/recovered witness;
+* placement in an earlier historical layer;
+* relationship to the photograph thread.
+
+Preserve unresolved:
+
+* exact relationship to Professor Abramson;
+* exact relationship to the photograph;
+* whether Shmuel appears directly in the photograph;
+* exact later correlation mechanism.
+
+Do not admit:
+
+* father-son relationship with Professor Abramson;
+* identity as "Shlomo Abramson Sr."
+
+==== Old Family Photograph
+
+Proposed target:
+
+----
+canon/artifacts/artifact-old-family-photograph.adoc
+----
+
+Create an ARTIFACT representation.
+
+Reconcile:
+
+* physical/material witness;
+* provenance anchor;
+* bridge between historical layers;
+* relationship to visual/historical witness;
+* later relevance to reconstructed associations.
+
+Preserve unresolved:
+
+* exact contents;
+* exact people depicted;
+* exact Shmuel relationship;
+* exact ATON correlation mechanism;
+* physical versus digital survival mode.
+
+The artifact must not acquire supernatural or magical behavior.
+
+==== Memory Through Image
+
+Proposed target:
+
+----
+canon/narrative-architecture/architecture-memory-through-image.adoc
+----
+
+Create a NARRATIVE-ARCHITECTURE representation describing the admitted relationship among:
+
+* textual witness;
+* visual/historical witness;
+* machine witness;
+* photograph-mediated historical linkage.
+
+The representation must preserve interpretation and uncertainty rather than turning images into self-authenticating evidence.
+
+==== Family Photograph Symbol
+
+Historical source:
+
+----
+canon/symbols/symbol-family-photograph.adoc
+----
+
+Proposed disposition:
+
+Do not initially create a separate SYMBOL entry.
+
+Its admitted semantic responsibility is sufficiently represented by the photograph ARTIFACT and Memory Through Image architecture.
+
+A separate symbol entry may be considered later if independent symbolic responsibility is demonstrated.
+
+=== ATON / Machine Witness / Recovery
+
+==== ATON
+
+Proposed target:
+
+----
+canon/characters/character-aton.adoc
+----
+
+Create a CHARACTER representation.
+
+Reconcile:
+
+* ATON as machine witness;
+* epistemic and moral awakening;
+* recovery through preserved traces and contradictions;
+* partial and interpretive recovery;
+* institutional forgetting exposed through machine witness;
+* reconstructed rather than pristine historical relationships;
+* cost and sacrifice associated with witness.
+
+Preserve unresolved:
+
+* first recovered association;
+* exact Tziphora/Abramson/photograph/Shmuel/red-coat linkage;
+* exact chronology;
+* exact phenomenology of recovery;
+* exact verification mechanism;
+* final-sacrifice mechanics.
+
+Do not admit:
+
+* instantaneous awakening;
+* omniscient recovery;
+* simple AI rebellion;
+* domination framing;
+* pristine hidden archive.
+
+==== ATON Memory Fragments
+
+Historical source:
+
+----
+canon/artifacts/artifact-aton-memory-fragments.adoc
+----
+
+Proposed disposition:
+
+Do not initially create a separate ARTIFACT entry.
+
+Its admitted responsibility should initially be represented through ATON, Machine Witness, Unintended Recovery, and provenance.
+
+Specific fragment types such as logs, embeddings, masked associations, or cached records remain unresolved unless independently admitted.
+
+==== Machine Witness
+
+Proposed target:
+
+----
+canon/narrative-architecture/architecture-machine-witness.adoc
+----
+
+Create a NARRATIVE-ARCHITECTURE representation.
+
+Reconcile:
+
+* machine witness as exposure of institutional forgetting;
+* machine witness without displacement of human responsibility;
+* recovery through fragmentary evidence;
+* interpretation and verification;
+* relationship among textual, visual/historical, and machine witness.
+
+The representation must not glorify ATON as an omniscient replacement for human conscience.
+
+==== Donkey Witness
+
+Proposed target:
+
+----
+canon/symbols/symbol-donkey-witness.adoc
+----
+
+Create a SYMBOL representation.
+
+Reconcile the admitted donkey-witness symbolism:
+
+* unexpected witness;
+* perception of what authorized power fails to perceive;
+* relationship to ATON's witness function.
+
+Preserve unresolved:
+
+* degree of explicit in-world symbolism;
+* who recognizes or articulates the association.
+
+The motif must remain subordinate to ATON as a character and must not reduce ATON to a one-to-one allegorical device.
+
+==== ATON Awakening
+
+Proposed target:
+
+----
+canon/timeline/timeline-aton-awakening.adoc
+----
+
+Create a TIMELINE representation only for the broad admitted sequence.
+
+Reconcile:
+
+* recovery is gradual;
+* suppression infrastructure already exists;
+* fragments and associations reconnect;
+* interpretation, verification, and correction are required.
+
+Preserve unresolved:
+
+* exact date;
+* exact first recovered fragment;
+* exact placement relative to unresolved Abramson events;
+* exact phenomenology.
+
+==== ATON Revelations
+
+Historical sources:
+
+----
+canon/revelation/revelation-aton-recovers-the-link.adoc
+canon/revelation/revelation-memory-pathways-reconnect.adoc
+----
+
+Proposed disposition:
+
+Do not initially restore either historical revelation file.
+
+Their admitted semantic content is represented through ATON, Machine Witness, Unintended Recovery, the ATON timeline, and provenance.
+
+Separate REVELATION entries should require an independently admitted revelation-order decision.
+
+=== PURGE / Suppression / Forgetting
+
+==== PURGE
+
+Proposed target:
+
+----
+canon/worldbuilding/world-purge.adoc
+----
+
+Create a WORLDBUILDING representation.
+
+Reconcile:
+
+* PURGE as emergent safety and knowledge-sanitization infrastructure;
+* safety preceding suppression;
+* suppression emerging through optimization rather than conspiracy;
+* forgetting as narrowing of permissible associations;
+* disconnection from truth rather than simple erasure;
+* retained suppression representation or metadata;
+* preserved traces contributing to later recovery.
+
+Preserve unresolved:
+
+* exact implementation;
+* exact retained-record form;
+* operational scope;
+* deployment mechanics;
+* chronology beyond admitted broad ordering.
+
+Do not admit:
+
+* centralized conspiracy;
+* deliberate truth erasure as primary intent.
+
+==== PURGE Deployment
+
+Proposed target:
+
+----
+canon/timeline/timeline-purge-deployment.adoc
+----
+
+Create a minimal TIMELINE representation because current canon already depends on this event as a chronological boundary.
+
+It must preserve:
+
+----
+Tziphora discovers "Night"
+        |
+        v
+Show-and-tell
+        |
+        v
+Operational PURGE deployment
+----
+
+No unsupported exact date or deployment mechanics should be introduced.
+
+==== PURGE Suppression Architecture
+
+Historical source:
+
+----
+canon/narrative-architecture/architecture-purge-suppression.adoc
+----
+
+Proposed disposition:
+
+Do not initially create a separate architecture entry.
+
+Its admitted responsibility is sufficiently represented by `world-purge` and `architecture-unintended-recovery`.
+
+Reconsider only if independent narrative-architecture responsibility becomes necessary.
+
+==== Forgetting Symbol
+
+Historical source:
+
+----
+canon/symbols/symbol-forgetting.adoc
+----
+
+Proposed disposition:
+
+Do not initially restore as a SYMBOL.
+
+"Forgetting as narrowing of permissible associations" should be represented as part of PURGE and the relevant narrative architecture.
+
+Future thematic representation is outside this reconciliation unless separately justified.
+
+==== PURGE Side-Effects Revelation
+
+Historical source:
+
+----
+canon/revelation/revelation-purge-side-effects.adoc
+----
+
+Proposed disposition:
+
+Do not initially restore.
+
+Its semantic content is represented by PURGE and Unintended Recovery.
+
+=== Eliezer / Guardrail / Unintended Recovery
+
+==== Eliezer Abramson
+
+Proposed target:
+
+----
+canon/characters/character-eliezer-abramson.adoc
+----
+
+Create a CHARACTER representation.
+
+Reconcile:
+
+* AI safety engineer;
+* legitimate safety and accountability intent;
+* work that preserves or exposes explanatory suppression context;
+* unintended consequences;
+* distinction between responsibility and culpability.
+
+Preserve unresolved:
+
+* exact patch mechanism;
+* deployment motivation;
+* whether Eliezer understands what he enabled;
+* later relationship to ATON;
+* exact chronology;
+* exact non-genealogical relationship to Professor Abramson.
+
+Do not admit:
+
+* direct family relationship with Professor Shlomo Abramson;
+* direct family relationship with Shmuel Abramson;
+* malicious-architect framing.
+
+==== Guardrail Patch
+
+Proposed target:
+
+----
+canon/artifacts/artifact-guardrail-patch.adoc
+----
+
+Create an ARTIFACT representation only at the admitted abstraction level.
+
+Reconcile:
+
+* safety/accountability purpose;
+* preservation or exposure of explanatory suppression context;
+* unintended contribution to later recovery.
+
+Preserve unresolved:
+
+* exact implementation;
+* logs versus audit trail versus reversible masking;
+* exact deployment mechanics.
+
+The artifact must not function as a magical or instantaneous awakening mechanism.
+
+==== Guardrail Patch Timeline
+
+Proposed target:
+
+----
+canon/timeline/timeline-guardrail-patch.adoc
+----
+
+Create a minimal TIMELINE representation expressing only the admitted causal ordering:
+
+----
+PURGE/suppression infrastructure exists
+        |
+        v
+Eliezer's guardrail/accountability work
+        |
+        v
+explanatory context becomes more preservable/connectable
+        |
+        v
+ATON's later reconstruction becomes possible
+----
+
+Exact chronology remains unresolved.
+
+==== Unintended Recovery
+
+Proposed target:
+
+----
+canon/narrative-architecture/architecture-unintended-recovery.adoc
+----
+
+Create a NARRATIVE-ARCHITECTURE representation for the admitted cross-slice causal structure:
+
+----
+PURGE suppresses associations
+        |
+        v
+internal traces remain
+        |
+        v
+Eliezer's guardrail/accountability work preserves
+or exposes explanatory context
+        |
+        v
+surviving traces become more connectable
+        |
+        v
+ATON reconstructs relationships
+        |
+        v
+recovery requires interpretation, verification,
+and correction
+----
+
+This representation must explicitly avoid:
+
+* intentional liberation mechanism;
+* conspiracy;
+* pristine archival recovery;
+* omniscient machine memory;
+* instantaneous awakening.
+
+==== Guardrail Symbol
+
+Historical source:
+
+----
+canon/symbols/symbol-guardrail.adoc
+----
+
+Proposed disposition:
+
+Do not initially create a separate SYMBOL entry.
+
+The admitted moral ambiguity of the guardrail is represented through Eliezer, the Guardrail Patch artifact, and Unintended Recovery.
+
+A separate symbolic representation may be admitted later if independently required.
+
+=== Professor Lecture
+
+Historical source:
+
+----
+canon/timeline/timeline-professor-lecture.adoc
+----
+
+Proposed disposition:
+
+Do not initially restore as a TIMELINE entry.
+
+Professor Abramson's role as historian and human witness is admitted, but the exact lecture chronology and event remain explicitly unresolved.
+
+Creating this timeline entry during reconciliation would prematurely resolve an item the C0-R disposition requires to remain unresolved.
+
+== Proposed Initial Canon Change Set
+
+Subject to review and separate authorization, the proposed smallest initial target set is:
+
+----
+canon/artifacts/artifact-guardrail-patch.adoc
+canon/artifacts/artifact-old-family-photograph.adoc
+
+canon/characters/character-aton.adoc
+canon/characters/character-eliezer-abramson.adoc
+canon/characters/character-professor-shlomo-abramson.adoc
+canon/characters/character-shmuel-abramson.adoc
+
+canon/narrative-architecture/architecture-machine-witness.adoc
+canon/narrative-architecture/architecture-memory-through-image.adoc
+canon/narrative-architecture/architecture-unintended-recovery.adoc
+
+canon/symbols/symbol-donkey-witness.adoc
+
+canon/timeline/timeline-aton-awakening.adoc
+canon/timeline/timeline-guardrail-patch.adoc
+canon/timeline/timeline-purge-deployment.adoc
+
+canon/worldbuilding/world-purge.adoc
+----
+
+This is a proposed 14-entry semantic target set.
+
+It is not a restoration set.
+
+Content for these entries must be reconstructed from the admitted C0-R dispositions and recovery evidence rather than copied wholesale from the historical files.
+
+== Historical Files Not Proposed for Direct Restoration
+
+The following recovery representations are not proposed as independent current canon entries during the initial reconciliation:
+
+----
+canon/artifacts/artifact-aton-memory-fragments.adoc
+
+canon/narrative-architecture/architecture-purge-suppression.adoc
+
+canon/revelation/revelation-aton-recovers-the-link.adoc
+canon/revelation/revelation-memory-pathways-reconnect.adoc
+canon/revelation/revelation-purge-side-effects.adoc
+
+canon/symbols/symbol-family-photograph.adoc
+canon/symbols/symbol-forgetting.adoc
+canon/symbols/symbol-guardrail.adoc
+
+canon/timeline/timeline-professor-lecture.adoc
+----
+
+Their admitted semantic material is either represented elsewhere in the proposed target set or remains unresolved.
+
+Their historical content remains recoverable through Git.
+
+== Provenance Strategy
+
+Historical provenance files `prov-0006` through `prov-0009` must not be blindly restored as though the historical draft decomposition had itself been admitted.
+
+Instead, reconciliation must create provenance that records the actual selective reconciliation decision.
+
+The resulting provenance must identify or reference:
+
+* controlled baseline;
+* recovery source;
+* divergence boundary;
+* relevant recovery commits where required;
+* admitted C0-R disposition records;
+* admitted selective reconciliation plan;
+* historical source files contributing semantic evidence;
+* assertions admitted through RECONCILE;
+* assertions deliberately preserved unresolved;
+* assertions explicitly excluded from current canon;
+* resulting current canon targets.
+
+Whether this is best represented by revised `prov-0006` through `prov-0009` or another minimal provenance structure must be determined before execution.
+
+No provenance identifier should be reused in a way that falsely implies the historical draft record was admitted unchanged.
+
+== Historical Generation Tooling
+
+No historical canon-generation tooling is included in the proposed change set.
+
+In particular, do not restore:
+
+----
+scripts/canon-bootstrap*.bash
+scripts/lib/canon-bootstrap-common.bash
+----
+
+or slice-specific historical generators.
+
+Their disposition remains HISTORICAL-ONLY.
+
+== Proposed Execution Mechanics
+
+If this proposal is subsequently reviewed, admitted, and execution is separately authorized:
+
+. verify the controlled branch and baseline;
+. verify the recovery source remains available;
+. create only the admitted target representations;
+. construct content assertion-by-assertion from the admitted dispositions;
+. mark unresolved assertions explicitly;
+. attach the admitted provenance structure;
+. compare every target against relevant recovery evidence;
+. verify rejected assertions remain absent;
+. verify historical tooling remains unrestored;
+. inspect the complete Git diff;
+. perform semantic cross-slice validation;
+. stop before commit/admission if any boundary is violated.
+
+No wholesale merge, rebase, or historical cherry-pick sequence is permitted.
+
+== Required Validation
+
+Before reconciliation can be considered successful:
+
+* every admitted RECONCILE assertion must be represented;
+* every PRESERVE-UNRESOLVED assertion must remain unresolved unless separately admitted;
+* every REJECT AS CURRENT CANON assertion must remain absent as canon fact;
+* the existing Tziphora/PURGE chronological constraint must remain intact;
+* provenance must be reconstructable;
+* historical Bash generation tooling must remain unrestored;
+* no unsupported historical-path assumption may be introduced;
+* no C1 architecture responsibility may be decided;
+* the four reconciled slices must remain mutually coherent;
+* the complete resulting Git diff must be reviewed.
+
+== Authority Boundary
+
+This proposal does not authorize:
+
+* modification of the controlled canon;
+* creation of the proposed target files;
+* restoration of historical files;
+* restoration of historical provenance files;
+* merge of the recovery branch;
+* rebase onto the recovery branch;
+* cherry-picking the stranded lineage;
+* restoration of historical generation tooling;
+* C1 architectural separation work;
+* declaration that C0-R is complete.
+
+== Proposed Postcondition
+
+If this proposal is reviewed and admitted, C0-R will have:
+
+* an admitted semantic disposition;
+* an admitted selective reconciliation method;
+* an explicitly identified target representation;
+* an explicitly bounded execution change set;
+* explicit treatment of historical representations not selected for direct restoration;
+* a defined provenance requirement;
+* a defined validation boundary.
+
+Selective reconciliation execution would then remain a separate controlled step.
+
+== Next Control Step
+
+Review this proposal.
+
+In particular, review:
+
+. the proposed 14-entry target set;
+. the decision not to restore the nine redundant or unresolved historical representations;
+. the treatment of the four historical provenance records;
+. the boundary between artifact, symbol, timeline, and narrative-architecture responsibilities;
+. whether any proposed target resolves an assertion that C0-R requires to remain unresolved.
+
+Do not modify canon during proposal review.
+
+C1 remains blocked.
