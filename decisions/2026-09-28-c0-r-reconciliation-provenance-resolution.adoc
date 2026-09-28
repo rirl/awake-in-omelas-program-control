@@ -1,0 +1,257 @@
+= C0-R Reconciliation Provenance Resolution
+:revdate: 2026-09-28
+:status: PROPOSED
+
+== Status
+
+Proposed provenance-resolution decision for C0-R — Canon Lineage Reconciliation.
+
+This decision resolves the provenance representation left open by the admitted
+C0-R Selective Reconciliation Execution Proposal.
+
+This document does not perform canon reconciliation.
+
+This document does not authorize canon modification.
+
+C1 remains blocked.
+
+== Authority
+
+This decision is subordinate to:
+
+* the admitted C0-R canon-lineage reconciliation record;
+* the admitted C0-R semantic reconciliation findings;
+* the admitted C0-R disposition analysis;
+* the admitted C0-R Selective Reconciliation Plan;
+* the admitted C0-R Selective Reconciliation Execution Proposal;
+* the controlled Awake in Omelas architecture baseline.
+
+== Controlled State
+
+Controlled canon repository:
+
+----
+awake-in-omelas
+----
+
+Controlled branch:
+
+----
+feature/architectural-separation-phase-a
+----
+
+Controlled baseline:
+
+----
+9df5dd837800cecca3db31bff4bba48cd2342b9f
+----
+
+Recovery source:
+
+----
+feature/initial-canon-entries
+8ec6666fc4d7cde9110daa05491c75905dea0df3
+----
+
+Program-control execution-proposal admission:
+
+----
+d73eb89e53ce855a5d537fceeca5f7b04d61ff18
+----
+
+== Provenance Inspection Finding
+
+The current canon provenance model is decision-oriented rather than strictly
+one-provenance-record-per-canon-entry.
+
+Existing provenance records represent character canonization, artifact
+canonization, timeline canonization, checkpoint establishment, and related
+decision history.
+
+The historical recovery lineage contains four later provenance identifiers:
+
+----
+prov-0006
+prov-0007
+prov-0008
+prov-0009
+----
+
+These correspond naturally to the four semantic reconciliation slices:
+
+----
+prov-0006  Abramson / Photograph / Family Memory
+prov-0007  ATON / Machine Witness / Recovery
+prov-0008  PURGE / Suppression / Forgetting
+prov-0009  Eliezer / Guardrail / Unintended Recovery
+----
+
+The historical files associated with those identifiers are recovery evidence.
+
+They are not admitted current provenance records.
+
+== Resolution
+
+Preserve provenance identifiers `prov-0006` through `prov-0009` for lineage
+continuity.
+
+Do not restore the historical provenance files unchanged.
+
+Instead, selective reconciliation shall create new current provenance records
+using the established decision-oriented provenance structure.
+
+The proposed current representations are:
+
+----
+canon/provenance/prov-0006-abramson-photograph-reconciliation.adoc
+canon/provenance/prov-0007-aton-recovery-reconciliation.adoc
+canon/provenance/prov-0008-purge-reconciliation.adoc
+canon/provenance/prov-0009-eliezer-guardrail-reconciliation.adoc
+----
+
+Reuse of the provenance identifiers preserves lineage continuity.
+
+The changed filenames and reconstructed contents must make clear that the
+historical draft records were not admitted unchanged.
+
+== Required Provenance Content
+
+Each reconciliation provenance record must identify or reference, as
+applicable:
+
+* the controlled baseline;
+* the recovery source;
+* the divergence boundary;
+* relevant recovery commits;
+* relevant historical recovery files;
+* admitted C0-R semantic dispositions;
+* the admitted selective-reconciliation plan;
+* the admitted execution proposal;
+* assertions admitted through RECONCILE;
+* assertions preserved unresolved;
+* assertions rejected as current canon;
+* resulting current canon targets.
+
+The records must preserve enough information to reconstruct why each current
+canon assertion was admitted without requiring restoration of the historical
+file decomposition.
+
+== Slice Responsibilities
+
+=== prov-0006 — Abramson / Photograph / Family Memory
+
+This provenance record shall account for the reconciled representations
+associated with Professor Shlomo Abramson, Shmuel Abramson, the old family
+photograph, and Memory Through Image.
+
+It must preserve unresolved relationship and photograph-content questions and
+must not admit unsupported genealogy.
+
+=== prov-0007 — ATON / Machine Witness / Recovery
+
+This provenance record shall account for ATON, Machine Witness, Donkey Witness,
+and the broad ATON awakening sequence.
+
+It must preserve partial, interpretive, non-omniscient recovery and the
+unresolved details of ATON's first recovered associations and exact chronology.
+
+=== prov-0008 — PURGE / Suppression / Forgetting
+
+This provenance record shall account for PURGE and the admitted broad
+deployment ordering.
+
+It must preserve PURGE as emergent safety and knowledge-sanitization
+infrastructure rather than a centralized conspiracy and must leave exact
+implementation and deployment mechanics unresolved.
+
+=== prov-0009 — Eliezer / Guardrail / Unintended Recovery
+
+This provenance record shall account for Eliezer Abramson, the Guardrail Patch,
+the broad guardrail causal ordering, and Unintended Recovery.
+
+It must preserve legitimate safety intent, unintended consequences, and the
+distinction between responsibility and culpability.
+
+It must not establish an unsupported genealogical relationship.
+
+== Relationship to the Initial Canon Change Set
+
+The admitted execution proposal identifies fourteen semantic canon targets.
+
+This provenance resolution adds four reconciliation provenance records to the
+controlled execution representation.
+
+Therefore the bounded reconciliation working set consists of:
+
+----
+14 semantic canon target files
+ 4 reconciliation provenance files
+--
+18 files total
+----
+
+The four provenance records are audit and decision records for the selective
+reconciliation.
+
+They are not four additional narrative assertions or restored historical canon
+entries.
+
+== Historical Provenance Treatment
+
+Historical recovery versions of `prov-0006` through `prov-0009` remain
+available through Git history as evidence.
+
+They must not be copied wholesale into current canon.
+
+Assertions appearing in those historical records acquire current authority
+only when supported by the admitted C0-R dispositions.
+
+Historical assertions classified as unresolved must remain unresolved.
+
+Historical assertions rejected as current canon must remain absent as canon
+facts.
+
+== Authority Boundary
+
+This provenance resolution does not authorize:
+
+* creation of the fourteen semantic canon target files;
+* creation of the four reconciliation provenance files;
+* modification of existing canon;
+* restoration of historical provenance content;
+* wholesale merge of the recovery branch;
+* rebase onto the recovery branch;
+* cherry-picking of the stranded lineage;
+* C1 architectural-separation work;
+* declaration that C0-R is complete.
+
+== Proposed Postcondition
+
+If reviewed and admitted, the provenance representation required for selective
+reconciliation will be explicitly resolved.
+
+At that point the admitted C0-R execution boundary will consist of:
+
+* the admitted semantic dispositions;
+* the admitted selective-reconciliation method;
+* the admitted fourteen-target execution proposal;
+* the admitted four-record provenance representation;
+* the existing validation and authority boundaries.
+
+Selective reconciliation execution will remain a separately authorized step.
+
+== Next Control Step
+
+Review this provenance resolution.
+
+Verify in particular:
+
+. reuse of provenance identifiers `prov-0006` through `prov-0009`;
+. replacement rather than restoration of their historical contents;
+. use of four slice-level decision records rather than fourteen per-entry records;
+. the resulting eighteen-file bounded reconciliation working set;
+. preservation of unresolved and rejected assertions.
+
+Do not modify canon during this review.
+
+C1 remains blocked.
